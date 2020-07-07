@@ -1,0 +1,15 @@
+C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\bin\Debug\SystemBiblioteczny.exe.config
+C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\bin\Debug\SystemBiblioteczny.exe
+C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\bin\Debug\SystemBiblioteczny.pdb
+C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\bin\Debug\EntityFramework.dll
+C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\bin\Debug\EntityFramework.xml
+C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\obj\Debug\SystemBiblioteczny.csprojAssemblyReference.cache
+C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\obj\Debug\SystemBiblioteczny.Form1.resources
+C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\obj\Debug\SystemBiblioteczny.Properties.Resources.resources
+C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\obj\Debug\SystemBiblioteczny.csproj.GenerateResource.cache
+C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\obj\Debug\SystemBiblioteczny.csproj.CoreCompileInputs.cache
+C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\obj\Debug\SystemBiblioteczny.csproj.CopyComplete
+C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\obj\Debug\SystemBiblioteczny.exe
+C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\obj\Debug\SystemBiblioteczny.pdb
