@@ -69,12 +69,12 @@
             this.UsernameTB.Name = "UsernameTB";
             this.UsernameTB.Size = new System.Drawing.Size(231, 20);
             this.UsernameTB.TabIndex = 2;
-            
             // 
             // PasswordTB
             // 
             this.PasswordTB.Location = new System.Drawing.Point(326, 175);
             this.PasswordTB.Name = "PasswordTB";
+            this.PasswordTB.PasswordChar = '*';
             this.PasswordTB.Size = new System.Drawing.Size(231, 20);
             this.PasswordTB.TabIndex = 2;
             // 

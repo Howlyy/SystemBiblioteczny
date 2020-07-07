@@ -13,10 +13,10 @@ namespace SystemBiblioteczny
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SystemBibliotecznyEntities : DbContext
+    public partial class SystemBibliotecznyEntities123 : DbContext
     {
-        public SystemBibliotecznyEntities()
-            : base("name=SystemBibliotecznyEntities")
+        public SystemBibliotecznyEntities123()
+            : base("name=SystemBibliotecznyEntities123")
         {
         }
     
@@ -25,6 +25,6 @@ namespace SystemBiblioteczny
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Table> Table { get; set; }
+        public virtual DbSet<Admin> Admin { get; set; }
     }
 }

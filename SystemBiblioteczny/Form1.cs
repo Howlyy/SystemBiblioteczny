@@ -10,16 +10,37 @@ using System.Windows.Forms;
 
 namespace SystemBiblioteczny
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form /// głowna klasa okna pierwszego ( Form1)
     {
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void UsernameTB_TextChanged(object sender, EventArgs e)
-        {
+        
 
+        private void LoginButton_Click(object sender, EventArgs e) /// prywatna funkcja przycisku Login
+        {
+            SystemBibliotecznyEntities123 content = new SystemBibliotecznyEntities123(); //połaczenie do bazy
+            if (UsernameTB.Text != string.Empty && PasswordTB.Text != string.Empty) // sprawdzenie czy user i pass nie są puste
+            {
+                var user = content.Admin.Where(x => x.Username.Equals(UsernameTB.Text)).FirstOrDefault(); // sprawdzenie username w tabeli Admin
+                if (user!=null) 
+                {
+                    if (user.Password.Equals(PasswordTB.Text))
+                    {
+                        MessageBox.Show("Zalogowano!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hasło nieprawidłowe!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Nazwa użytkownika nieprawidłowe!");
+                }
+            }
         }
     }
 }
