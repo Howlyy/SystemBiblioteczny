@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SystemBiblioteczny
 {
-    public partial class Form1 : Form /// głowna klasa okna pierwszego ( Form1)
+    public partial class LoginForm : Form /// głowna klasa okna pierwszego ( Form1)
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace SystemBiblioteczny
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -78,7 +78,7 @@
             this.PasswordTB.Size = new System.Drawing.Size(231, 20);
             this.PasswordTB.TabIndex = 2;
             // 
-            // Form1
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -88,8 +88,8 @@
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.UsernameLabel);
             this.Controls.Add(this.LoginButton);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "LoginForm";
+            this.Text = "Panel logowania";
             this.ResumeLayout(false);
             this.PerformLayout();
 

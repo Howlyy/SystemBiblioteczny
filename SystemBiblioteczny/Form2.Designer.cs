@@ -29,26 +29,27 @@
         private void InitializeComponent()
         {
             this.BookTitleCategoryGB = new System.Windows.Forms.GroupBox();
+            this.BookCategoryTitleSearchButton = new System.Windows.Forms.Button();
+            this.BookCategoryCB = new System.Windows.Forms.ComboBox();
+            this.BookTitleCB = new System.Windows.Forms.ComboBox();
             this.BookCategoryLabel = new System.Windows.Forms.Label();
             this.BookTitleLabel = new System.Windows.Forms.Label();
-            this.BookTitleCB = new System.Windows.Forms.ComboBox();
-            this.BookCategoryCB = new System.Windows.Forms.ComboBox();
-            this.BookCategoryTitleSearchButton = new System.Windows.Forms.Button();
             this.SearchingResultGB = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BookDataGB = new System.Windows.Forms.GroupBox();
-            this.BookTitleGBLabel = new System.Windows.Forms.Label();
-            this.BookAuthorGBLabel = new System.Windows.Forms.Label();
-            this.BookQuantityGBLabel = new System.Windows.Forms.Label();
-            this.BookCategoryGBLabel = new System.Windows.Forms.Label();
-            this.BookIDGBLabel = new System.Windows.Forms.Label();
-            this.StudentIDGBLabel = new System.Windows.Forms.Label();
-            this.BookTitleGBTB = new System.Windows.Forms.TextBox();
-            this.BookAutorGBTB = new System.Windows.Forms.TextBox();
-            this.BookQuantityGBTB = new System.Windows.Forms.TextBox();
-            this.BookCategoryGBTB = new System.Windows.Forms.TextBox();
-            this.BookIDGBTB = new System.Windows.Forms.TextBox();
             this.StudentIDGBTB = new System.Windows.Forms.TextBox();
+            this.BookIDGBTB = new System.Windows.Forms.TextBox();
+            this.BookCategoryGBTB = new System.Windows.Forms.TextBox();
+            this.BookQuantityGBTB = new System.Windows.Forms.TextBox();
+            this.BookAutorGBTB = new System.Windows.Forms.TextBox();
+            this.BookTitleGBTB = new System.Windows.Forms.TextBox();
+            this.StudentIDGBLabel = new System.Windows.Forms.Label();
+            this.BookIDGBLabel = new System.Windows.Forms.Label();
+            this.BookCategoryGBLabel = new System.Windows.Forms.Label();
+            this.BookQuantityGBLabel = new System.Windows.Forms.Label();
+            this.BookAuthorGBLabel = new System.Windows.Forms.Label();
+            this.BookTitleGBLabel = new System.Windows.Forms.Label();
+            this.BookIssueButton = new System.Windows.Forms.Button();
             this.BookTitleCategoryGB.SuspendLayout();
             this.SearchingResultGB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -69,6 +70,31 @@
             this.BookTitleCategoryGB.TabStop = false;
             this.BookTitleCategoryGB.Text = "Kryteria wyszukiwania - Wybierz przynajmniej jedną opcje";
             // 
+            // BookCategoryTitleSearchButton
+            // 
+            this.BookCategoryTitleSearchButton.Location = new System.Drawing.Point(199, 168);
+            this.BookCategoryTitleSearchButton.Name = "BookCategoryTitleSearchButton";
+            this.BookCategoryTitleSearchButton.Size = new System.Drawing.Size(121, 42);
+            this.BookCategoryTitleSearchButton.TabIndex = 4;
+            this.BookCategoryTitleSearchButton.Text = "Szukaj";
+            this.BookCategoryTitleSearchButton.UseVisualStyleBackColor = true;
+            // 
+            // BookCategoryCB
+            // 
+            this.BookCategoryCB.FormattingEnabled = true;
+            this.BookCategoryCB.Location = new System.Drawing.Point(170, 112);
+            this.BookCategoryCB.Name = "BookCategoryCB";
+            this.BookCategoryCB.Size = new System.Drawing.Size(150, 21);
+            this.BookCategoryCB.TabIndex = 3;
+            // 
+            // BookTitleCB
+            // 
+            this.BookTitleCB.FormattingEnabled = true;
+            this.BookTitleCB.Location = new System.Drawing.Point(170, 40);
+            this.BookTitleCB.Name = "BookTitleCB";
+            this.BookTitleCB.Size = new System.Drawing.Size(150, 21);
+            this.BookTitleCB.TabIndex = 3;
+            // 
             // BookCategoryLabel
             // 
             this.BookCategoryLabel.AutoSize = true;
@@ -86,31 +112,6 @@
             this.BookTitleLabel.Size = new System.Drawing.Size(67, 13);
             this.BookTitleLabel.TabIndex = 2;
             this.BookTitleLabel.Text = "Tytuł książki";
-            // 
-            // BookTitleCB
-            // 
-            this.BookTitleCB.FormattingEnabled = true;
-            this.BookTitleCB.Location = new System.Drawing.Point(170, 40);
-            this.BookTitleCB.Name = "BookTitleCB";
-            this.BookTitleCB.Size = new System.Drawing.Size(150, 21);
-            this.BookTitleCB.TabIndex = 3;
-            // 
-            // BookCategoryCB
-            // 
-            this.BookCategoryCB.FormattingEnabled = true;
-            this.BookCategoryCB.Location = new System.Drawing.Point(170, 112);
-            this.BookCategoryCB.Name = "BookCategoryCB";
-            this.BookCategoryCB.Size = new System.Drawing.Size(150, 21);
-            this.BookCategoryCB.TabIndex = 3;
-            // 
-            // BookCategoryTitleSearchButton
-            // 
-            this.BookCategoryTitleSearchButton.Location = new System.Drawing.Point(199, 168);
-            this.BookCategoryTitleSearchButton.Name = "BookCategoryTitleSearchButton";
-            this.BookCategoryTitleSearchButton.Size = new System.Drawing.Size(121, 42);
-            this.BookCategoryTitleSearchButton.TabIndex = 4;
-            this.BookCategoryTitleSearchButton.Text = "Szukaj";
-            this.BookCategoryTitleSearchButton.UseVisualStyleBackColor = true;
             // 
             // SearchingResultGB
             // 
@@ -132,6 +133,7 @@
             // 
             // BookDataGB
             // 
+            this.BookDataGB.Controls.Add(this.BookIssueButton);
             this.BookDataGB.Controls.Add(this.StudentIDGBTB);
             this.BookDataGB.Controls.Add(this.BookIDGBTB);
             this.BookDataGB.Controls.Add(this.BookCategoryGBTB);
@@ -146,55 +148,52 @@
             this.BookDataGB.Controls.Add(this.BookTitleGBLabel);
             this.BookDataGB.Location = new System.Drawing.Point(42, 378);
             this.BookDataGB.Name = "BookDataGB";
-            this.BookDataGB.Size = new System.Drawing.Size(897, 230);
+            this.BookDataGB.Size = new System.Drawing.Size(620, 230);
             this.BookDataGB.TabIndex = 2;
             this.BookDataGB.TabStop = false;
             this.BookDataGB.Text = "Dane ksiązki";
             // 
-            // BookTitleGBLabel
+            // StudentIDGBTB
             // 
-            this.BookTitleGBLabel.AutoSize = true;
-            this.BookTitleGBLabel.Location = new System.Drawing.Point(44, 44);
-            this.BookTitleGBLabel.Name = "BookTitleGBLabel";
-            this.BookTitleGBLabel.Size = new System.Drawing.Size(67, 13);
-            this.BookTitleGBLabel.TabIndex = 0;
-            this.BookTitleGBLabel.Text = "Tytuł książki";
+            this.StudentIDGBTB.Location = new System.Drawing.Point(470, 41);
+            this.StudentIDGBTB.Name = "StudentIDGBTB";
+            this.StudentIDGBTB.Size = new System.Drawing.Size(102, 20);
+            this.StudentIDGBTB.TabIndex = 1;
             // 
-            // BookAuthorGBLabel
+            // BookIDGBTB
             // 
-            this.BookAuthorGBLabel.AutoSize = true;
-            this.BookAuthorGBLabel.Location = new System.Drawing.Point(44, 80);
-            this.BookAuthorGBLabel.Name = "BookAuthorGBLabel";
-            this.BookAuthorGBLabel.Size = new System.Drawing.Size(35, 13);
-            this.BookAuthorGBLabel.TabIndex = 0;
-            this.BookAuthorGBLabel.Text = "Autor ";
+            this.BookIDGBTB.Location = new System.Drawing.Point(470, 90);
+            this.BookIDGBTB.Name = "BookIDGBTB";
+            this.BookIDGBTB.Size = new System.Drawing.Size(102, 20);
+            this.BookIDGBTB.TabIndex = 1;
             // 
-            // BookQuantityGBLabel
+            // BookCategoryGBTB
             // 
-            this.BookQuantityGBLabel.AutoSize = true;
-            this.BookQuantityGBLabel.Location = new System.Drawing.Point(44, 113);
-            this.BookQuantityGBLabel.Name = "BookQuantityGBLabel";
-            this.BookQuantityGBLabel.Size = new System.Drawing.Size(68, 13);
-            this.BookQuantityGBLabel.TabIndex = 0;
-            this.BookQuantityGBLabel.Text = "Ilość ksiązek";
+            this.BookCategoryGBTB.Location = new System.Drawing.Point(166, 139);
+            this.BookCategoryGBTB.Name = "BookCategoryGBTB";
+            this.BookCategoryGBTB.Size = new System.Drawing.Size(102, 20);
+            this.BookCategoryGBTB.TabIndex = 1;
             // 
-            // BookCategoryGBLabel
+            // BookQuantityGBTB
             // 
-            this.BookCategoryGBLabel.AutoSize = true;
-            this.BookCategoryGBLabel.Location = new System.Drawing.Point(44, 142);
-            this.BookCategoryGBLabel.Name = "BookCategoryGBLabel";
-            this.BookCategoryGBLabel.Size = new System.Drawing.Size(87, 13);
-            this.BookCategoryGBLabel.TabIndex = 0;
-            this.BookCategoryGBLabel.Text = "Kategoria książki";
+            this.BookQuantityGBTB.Location = new System.Drawing.Point(166, 106);
+            this.BookQuantityGBTB.Name = "BookQuantityGBTB";
+            this.BookQuantityGBTB.Size = new System.Drawing.Size(102, 20);
+            this.BookQuantityGBTB.TabIndex = 1;
             // 
-            // BookIDGBLabel
+            // BookAutorGBTB
             // 
-            this.BookIDGBLabel.AutoSize = true;
-            this.BookIDGBLabel.Location = new System.Drawing.Point(339, 90);
-            this.BookIDGBLabel.Name = "BookIDGBLabel";
-            this.BookIDGBLabel.Size = new System.Drawing.Size(87, 13);
-            this.BookIDGBLabel.TabIndex = 0;
-            this.BookIDGBLabel.Text = "Numer ID książki";
+            this.BookAutorGBTB.Location = new System.Drawing.Point(166, 73);
+            this.BookAutorGBTB.Name = "BookAutorGBTB";
+            this.BookAutorGBTB.Size = new System.Drawing.Size(102, 20);
+            this.BookAutorGBTB.TabIndex = 1;
+            // 
+            // BookTitleGBTB
+            // 
+            this.BookTitleGBTB.Location = new System.Drawing.Point(166, 41);
+            this.BookTitleGBTB.Name = "BookTitleGBTB";
+            this.BookTitleGBTB.Size = new System.Drawing.Size(102, 20);
+            this.BookTitleGBTB.TabIndex = 1;
             // 
             // StudentIDGBLabel
             // 
@@ -205,47 +204,59 @@
             this.StudentIDGBLabel.TabIndex = 0;
             this.StudentIDGBLabel.Text = "Numer ID studenta";
             // 
-            // BookTitleGBTB
+            // BookIDGBLabel
             // 
-            this.BookTitleGBTB.Location = new System.Drawing.Point(166, 41);
-            this.BookTitleGBTB.Name = "BookTitleGBTB";
-            this.BookTitleGBTB.Size = new System.Drawing.Size(102, 20);
-            this.BookTitleGBTB.TabIndex = 1;
+            this.BookIDGBLabel.AutoSize = true;
+            this.BookIDGBLabel.Location = new System.Drawing.Point(339, 90);
+            this.BookIDGBLabel.Name = "BookIDGBLabel";
+            this.BookIDGBLabel.Size = new System.Drawing.Size(87, 13);
+            this.BookIDGBLabel.TabIndex = 0;
+            this.BookIDGBLabel.Text = "Numer ID książki";
             // 
-            // BookAutorGBTB
+            // BookCategoryGBLabel
             // 
-            this.BookAutorGBTB.Location = new System.Drawing.Point(166, 73);
-            this.BookAutorGBTB.Name = "BookAutorGBTB";
-            this.BookAutorGBTB.Size = new System.Drawing.Size(102, 20);
-            this.BookAutorGBTB.TabIndex = 1;
+            this.BookCategoryGBLabel.AutoSize = true;
+            this.BookCategoryGBLabel.Location = new System.Drawing.Point(44, 142);
+            this.BookCategoryGBLabel.Name = "BookCategoryGBLabel";
+            this.BookCategoryGBLabel.Size = new System.Drawing.Size(87, 13);
+            this.BookCategoryGBLabel.TabIndex = 0;
+            this.BookCategoryGBLabel.Text = "Kategoria książki";
             // 
-            // BookQuantityGBTB
+            // BookQuantityGBLabel
             // 
-            this.BookQuantityGBTB.Location = new System.Drawing.Point(166, 106);
-            this.BookQuantityGBTB.Name = "BookQuantityGBTB";
-            this.BookQuantityGBTB.Size = new System.Drawing.Size(102, 20);
-            this.BookQuantityGBTB.TabIndex = 1;
+            this.BookQuantityGBLabel.AutoSize = true;
+            this.BookQuantityGBLabel.Location = new System.Drawing.Point(44, 113);
+            this.BookQuantityGBLabel.Name = "BookQuantityGBLabel";
+            this.BookQuantityGBLabel.Size = new System.Drawing.Size(68, 13);
+            this.BookQuantityGBLabel.TabIndex = 0;
+            this.BookQuantityGBLabel.Text = "Ilość ksiązek";
             // 
-            // BookCategoryGBTB
+            // BookAuthorGBLabel
             // 
-            this.BookCategoryGBTB.Location = new System.Drawing.Point(166, 139);
-            this.BookCategoryGBTB.Name = "BookCategoryGBTB";
-            this.BookCategoryGBTB.Size = new System.Drawing.Size(102, 20);
-            this.BookCategoryGBTB.TabIndex = 1;
+            this.BookAuthorGBLabel.AutoSize = true;
+            this.BookAuthorGBLabel.Location = new System.Drawing.Point(44, 80);
+            this.BookAuthorGBLabel.Name = "BookAuthorGBLabel";
+            this.BookAuthorGBLabel.Size = new System.Drawing.Size(35, 13);
+            this.BookAuthorGBLabel.TabIndex = 0;
+            this.BookAuthorGBLabel.Text = "Autor ";
             // 
-            // BookIDGBTB
+            // BookTitleGBLabel
             // 
-            this.BookIDGBTB.Location = new System.Drawing.Point(470, 90);
-            this.BookIDGBTB.Name = "BookIDGBTB";
-            this.BookIDGBTB.Size = new System.Drawing.Size(102, 20);
-            this.BookIDGBTB.TabIndex = 1;
+            this.BookTitleGBLabel.AutoSize = true;
+            this.BookTitleGBLabel.Location = new System.Drawing.Point(44, 44);
+            this.BookTitleGBLabel.Name = "BookTitleGBLabel";
+            this.BookTitleGBLabel.Size = new System.Drawing.Size(67, 13);
+            this.BookTitleGBLabel.TabIndex = 0;
+            this.BookTitleGBLabel.Text = "Tytuł książki";
             // 
-            // StudentIDGBTB
+            // BookIssueButton
             // 
-            this.StudentIDGBTB.Location = new System.Drawing.Point(470, 41);
-            this.StudentIDGBTB.Name = "StudentIDGBTB";
-            this.StudentIDGBTB.Size = new System.Drawing.Size(102, 20);
-            this.StudentIDGBTB.TabIndex = 1;
+            this.BookIssueButton.Location = new System.Drawing.Point(408, 159);
+            this.BookIssueButton.Name = "BookIssueButton";
+            this.BookIssueButton.Size = new System.Drawing.Size(141, 43);
+            this.BookIssueButton.TabIndex = 2;
+            this.BookIssueButton.Text = "Wypożycz książke";
+            this.BookIssueButton.UseVisualStyleBackColor = true;
             // 
             // BookSearchingForm
             // 
@@ -290,5 +301,6 @@
         private System.Windows.Forms.Label BookQuantityGBLabel;
         private System.Windows.Forms.Label BookAuthorGBLabel;
         private System.Windows.Forms.Label BookTitleGBLabel;
+        private System.Windows.Forms.Button BookIssueButton;
     }
 }
