@@ -64,7 +64,7 @@
             // BookTitleLabel
             // 
             this.BookTitleLabel.AutoSize = true;
-            this.BookTitleLabel.Location = new System.Drawing.Point(13, 49);
+            this.BookTitleLabel.Location = new System.Drawing.Point(13, 61);
             this.BookTitleLabel.Name = "BookTitleLabel";
             this.BookTitleLabel.Size = new System.Drawing.Size(67, 13);
             this.BookTitleLabel.TabIndex = 0;
@@ -73,7 +73,7 @@
             // BookCategoryLabel
             // 
             this.BookCategoryLabel.AutoSize = true;
-            this.BookCategoryLabel.Location = new System.Drawing.Point(13, 100);
+            this.BookCategoryLabel.Location = new System.Drawing.Point(13, 108);
             this.BookCategoryLabel.Name = "BookCategoryLabel";
             this.BookCategoryLabel.Size = new System.Drawing.Size(52, 13);
             this.BookCategoryLabel.TabIndex = 0;
@@ -91,7 +91,7 @@
             // BookIDNumberRemoveLabel
             // 
             this.BookIDNumberRemoveLabel.AutoSize = true;
-            this.BookIDNumberRemoveLabel.Location = new System.Drawing.Point(72, 38);
+            this.BookIDNumberRemoveLabel.Location = new System.Drawing.Point(37, 34);
             this.BookIDNumberRemoveLabel.Name = "BookIDNumberRemoveLabel";
             this.BookIDNumberRemoveLabel.Size = new System.Drawing.Size(87, 13);
             this.BookIDNumberRemoveLabel.TabIndex = 0;
@@ -100,7 +100,7 @@
             // BookTitleRemoveLabel
             // 
             this.BookTitleRemoveLabel.AutoSize = true;
-            this.BookTitleRemoveLabel.Location = new System.Drawing.Point(72, 93);
+            this.BookTitleRemoveLabel.Location = new System.Drawing.Point(46, 89);
             this.BookTitleRemoveLabel.Name = "BookTitleRemoveLabel";
             this.BookTitleRemoveLabel.Size = new System.Drawing.Size(67, 13);
             this.BookTitleRemoveLabel.TabIndex = 0;
@@ -109,7 +109,7 @@
             // BookCategoryRemoveLabel
             // 
             this.BookCategoryRemoveLabel.AutoSize = true;
-            this.BookCategoryRemoveLabel.Location = new System.Drawing.Point(72, 135);
+            this.BookCategoryRemoveLabel.Location = new System.Drawing.Point(46, 135);
             this.BookCategoryRemoveLabel.Name = "BookCategoryRemoveLabel";
             this.BookCategoryRemoveLabel.Size = new System.Drawing.Size(52, 13);
             this.BookCategoryRemoveLabel.TabIndex = 0;
@@ -118,7 +118,7 @@
             // BookQuantityRemoveLabel
             // 
             this.BookQuantityRemoveLabel.AutoSize = true;
-            this.BookQuantityRemoveLabel.Location = new System.Drawing.Point(63, 177);
+            this.BookQuantityRemoveLabel.Location = new System.Drawing.Point(37, 173);
             this.BookQuantityRemoveLabel.Name = "BookQuantityRemoveLabel";
             this.BookQuantityRemoveLabel.Size = new System.Drawing.Size(68, 13);
             this.BookQuantityRemoveLabel.TabIndex = 0;
@@ -144,28 +144,28 @@
             // BookCategoryCB
             // 
             this.BookCategoryCB.FormattingEnabled = true;
-            this.BookCategoryCB.Location = new System.Drawing.Point(204, 100);
+            this.BookCategoryCB.Location = new System.Drawing.Point(196, 100);
             this.BookCategoryCB.Name = "BookCategoryCB";
-            this.BookCategoryCB.Size = new System.Drawing.Size(215, 21);
+            this.BookCategoryCB.Size = new System.Drawing.Size(221, 21);
             this.BookCategoryCB.TabIndex = 2;
             // 
             // BookQuantityCB
             // 
-            this.BookQuantityCB.Location = new System.Drawing.Point(199, 150);
+            this.BookQuantityCB.Location = new System.Drawing.Point(196, 150);
             this.BookQuantityCB.Name = "BookQuantityCB";
             this.BookQuantityCB.Size = new System.Drawing.Size(221, 20);
             this.BookQuantityCB.TabIndex = 1;
             // 
             // BookTitleCB
             // 
-            this.BookTitleCB.Location = new System.Drawing.Point(199, 42);
+            this.BookTitleCB.Location = new System.Drawing.Point(196, 58);
             this.BookTitleCB.Name = "BookTitleCB";
             this.BookTitleCB.Size = new System.Drawing.Size(221, 20);
             this.BookTitleCB.TabIndex = 1;
             // 
             // BookIDNumberTB
             // 
-            this.BookIDNumberTB.Location = new System.Drawing.Point(199, 16);
+            this.BookIDNumberTB.Location = new System.Drawing.Point(196, 16);
             this.BookIDNumberTB.Name = "BookIDNumberTB";
             this.BookIDNumberTB.Size = new System.Drawing.Size(221, 20);
             this.BookIDNumberTB.TabIndex = 1;
@@ -190,28 +190,28 @@
             // BookCategoryRemoveCB
             // 
             this.BookCategoryRemoveCB.FormattingEnabled = true;
-            this.BookCategoryRemoveCB.Location = new System.Drawing.Point(235, 132);
+            this.BookCategoryRemoveCB.Location = new System.Drawing.Point(229, 132);
             this.BookCategoryRemoveCB.Name = "BookCategoryRemoveCB";
-            this.BookCategoryRemoveCB.Size = new System.Drawing.Size(215, 21);
+            this.BookCategoryRemoveCB.Size = new System.Drawing.Size(223, 21);
             this.BookCategoryRemoveCB.TabIndex = 2;
             // 
             // BookQuantityRemoveTB
             // 
-            this.BookQuantityRemoveTB.Location = new System.Drawing.Point(235, 170);
+            this.BookQuantityRemoveTB.Location = new System.Drawing.Point(229, 170);
             this.BookQuantityRemoveTB.Name = "BookQuantityRemoveTB";
             this.BookQuantityRemoveTB.Size = new System.Drawing.Size(221, 20);
             this.BookQuantityRemoveTB.TabIndex = 1;
             // 
             // BookTitleRemoveTB
             // 
-            this.BookTitleRemoveTB.Location = new System.Drawing.Point(235, 86);
+            this.BookTitleRemoveTB.Location = new System.Drawing.Point(229, 86);
             this.BookTitleRemoveTB.Name = "BookTitleRemoveTB";
             this.BookTitleRemoveTB.Size = new System.Drawing.Size(221, 20);
             this.BookTitleRemoveTB.TabIndex = 1;
             // 
             // BookIDNumberRemoveTB
             // 
-            this.BookIDNumberRemoveTB.Location = new System.Drawing.Point(235, 31);
+            this.BookIDNumberRemoveTB.Location = new System.Drawing.Point(229, 31);
             this.BookIDNumberRemoveTB.Name = "BookIDNumberRemoveTB";
             this.BookIDNumberRemoveTB.Size = new System.Drawing.Size(221, 20);
             this.BookIDNumberRemoveTB.TabIndex = 1;
