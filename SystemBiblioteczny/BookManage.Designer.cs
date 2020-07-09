@@ -35,19 +35,19 @@
             this.BookIDNumberRemoveLabel = new System.Windows.Forms.Label();
             this.BookTitleRemoveLabel = new System.Windows.Forms.Label();
             this.BookCategoryRemoveLabel = new System.Windows.Forms.Label();
-            this.BookQuantityRemoveLabel = new System.Windows.Forms.Label();
             this.BookAddGB = new System.Windows.Forms.GroupBox();
             this.BookCategoryCB = new System.Windows.Forms.ComboBox();
-            this.BookQuantityCB = new System.Windows.Forms.TextBox();
-            this.BookTitleCB = new System.Windows.Forms.TextBox();
+            this.BookQuantityTB = new System.Windows.Forms.TextBox();
+            this.BookTitleTB = new System.Windows.Forms.TextBox();
             this.BookIDNumberTB = new System.Windows.Forms.TextBox();
             this.BookRemoveGB = new System.Windows.Forms.GroupBox();
-            this.BookCategoryRemoveCB = new System.Windows.Forms.ComboBox();
-            this.BookQuantityRemoveTB = new System.Windows.Forms.TextBox();
+            this.BookQuantityToRemoveTB = new System.Windows.Forms.TextBox();
+            this.BookCategoryRemoveTB = new System.Windows.Forms.TextBox();
             this.BookTitleRemoveTB = new System.Windows.Forms.TextBox();
             this.BookIDNumberRemoveTB = new System.Windows.Forms.TextBox();
-            this.BookAddButton = new System.Windows.Forms.Button();
+            this.BookQuantityToRemoveLabel = new System.Windows.Forms.Label();
             this.BookRemoveButton = new System.Windows.Forms.Button();
+            this.BookAddButton = new System.Windows.Forms.Button();
             this.BookAddGB.SuspendLayout();
             this.BookRemoveGB.SuspendLayout();
             this.SuspendLayout();
@@ -115,20 +115,12 @@
             this.BookCategoryRemoveLabel.TabIndex = 0;
             this.BookCategoryRemoveLabel.Text = "Kategoria";
             // 
-            // BookQuantityRemoveLabel
-            // 
-            this.BookQuantityRemoveLabel.AutoSize = true;
-            this.BookQuantityRemoveLabel.Location = new System.Drawing.Point(37, 173);
-            this.BookQuantityRemoveLabel.Name = "BookQuantityRemoveLabel";
-            this.BookQuantityRemoveLabel.Size = new System.Drawing.Size(68, 13);
-            this.BookQuantityRemoveLabel.TabIndex = 0;
-            this.BookQuantityRemoveLabel.Text = "Ilość książek";
-            // 
             // BookAddGB
             // 
+            this.BookAddGB.Controls.Add(this.BookAddButton);
             this.BookAddGB.Controls.Add(this.BookCategoryCB);
-            this.BookAddGB.Controls.Add(this.BookQuantityCB);
-            this.BookAddGB.Controls.Add(this.BookTitleCB);
+            this.BookAddGB.Controls.Add(this.BookQuantityTB);
+            this.BookAddGB.Controls.Add(this.BookTitleTB);
             this.BookAddGB.Controls.Add(this.BookIDNumberTB);
             this.BookAddGB.Controls.Add(this.BookQuantityLabel);
             this.BookAddGB.Controls.Add(this.BookCategoryLabel);
@@ -136,7 +128,7 @@
             this.BookAddGB.Controls.Add(this.BookIDNumberLabel);
             this.BookAddGB.Location = new System.Drawing.Point(77, 35);
             this.BookAddGB.Name = "BookAddGB";
-            this.BookAddGB.Size = new System.Drawing.Size(476, 200);
+            this.BookAddGB.Size = new System.Drawing.Size(476, 270);
             this.BookAddGB.TabIndex = 1;
             this.BookAddGB.TabStop = false;
             this.BookAddGB.Text = "Dodawanie książki";
@@ -144,103 +136,112 @@
             // BookCategoryCB
             // 
             this.BookCategoryCB.FormattingEnabled = true;
-            this.BookCategoryCB.Location = new System.Drawing.Point(196, 100);
+            this.BookCategoryCB.Location = new System.Drawing.Point(168, 105);
             this.BookCategoryCB.Name = "BookCategoryCB";
             this.BookCategoryCB.Size = new System.Drawing.Size(221, 21);
             this.BookCategoryCB.TabIndex = 2;
             // 
-            // BookQuantityCB
+            // BookQuantityTB
             // 
-            this.BookQuantityCB.Location = new System.Drawing.Point(196, 150);
-            this.BookQuantityCB.Name = "BookQuantityCB";
-            this.BookQuantityCB.Size = new System.Drawing.Size(221, 20);
-            this.BookQuantityCB.TabIndex = 1;
+            this.BookQuantityTB.Location = new System.Drawing.Point(172, 154);
+            this.BookQuantityTB.Name = "BookQuantityTB";
+            this.BookQuantityTB.Size = new System.Drawing.Size(221, 20);
+            this.BookQuantityTB.TabIndex = 1;
             // 
-            // BookTitleCB
+            // BookTitleTB
             // 
-            this.BookTitleCB.Location = new System.Drawing.Point(196, 58);
-            this.BookTitleCB.Name = "BookTitleCB";
-            this.BookTitleCB.Size = new System.Drawing.Size(221, 20);
-            this.BookTitleCB.TabIndex = 1;
+            this.BookTitleTB.Location = new System.Drawing.Point(172, 58);
+            this.BookTitleTB.Name = "BookTitleTB";
+            this.BookTitleTB.Size = new System.Drawing.Size(221, 20);
+            this.BookTitleTB.TabIndex = 1;
             // 
             // BookIDNumberTB
             // 
-            this.BookIDNumberTB.Location = new System.Drawing.Point(196, 16);
+            this.BookIDNumberTB.Location = new System.Drawing.Point(172, 16);
             this.BookIDNumberTB.Name = "BookIDNumberTB";
             this.BookIDNumberTB.Size = new System.Drawing.Size(221, 20);
             this.BookIDNumberTB.TabIndex = 1;
             // 
             // BookRemoveGB
             // 
-            this.BookRemoveGB.Controls.Add(this.BookCategoryRemoveCB);
-            this.BookRemoveGB.Controls.Add(this.BookQuantityRemoveTB);
+            this.BookRemoveGB.Controls.Add(this.BookRemoveButton);
+            this.BookRemoveGB.Controls.Add(this.BookQuantityToRemoveTB);
+            this.BookRemoveGB.Controls.Add(this.BookCategoryRemoveTB);
             this.BookRemoveGB.Controls.Add(this.BookTitleRemoveTB);
             this.BookRemoveGB.Controls.Add(this.BookIDNumberRemoveTB);
-            this.BookRemoveGB.Controls.Add(this.BookQuantityRemoveLabel);
+            this.BookRemoveGB.Controls.Add(this.BookQuantityToRemoveLabel);
             this.BookRemoveGB.Controls.Add(this.BookCategoryRemoveLabel);
             this.BookRemoveGB.Controls.Add(this.BookTitleRemoveLabel);
             this.BookRemoveGB.Controls.Add(this.BookIDNumberRemoveLabel);
             this.BookRemoveGB.Location = new System.Drawing.Point(44, 328);
             this.BookRemoveGB.Name = "BookRemoveGB";
-            this.BookRemoveGB.Size = new System.Drawing.Size(545, 226);
+            this.BookRemoveGB.Size = new System.Drawing.Size(545, 278);
             this.BookRemoveGB.TabIndex = 2;
             this.BookRemoveGB.TabStop = false;
             this.BookRemoveGB.Text = "Usuwanie książki";
             // 
-            // BookCategoryRemoveCB
+            // BookQuantityToRemoveTB
             // 
-            this.BookCategoryRemoveCB.FormattingEnabled = true;
-            this.BookCategoryRemoveCB.Location = new System.Drawing.Point(229, 132);
-            this.BookCategoryRemoveCB.Name = "BookCategoryRemoveCB";
-            this.BookCategoryRemoveCB.Size = new System.Drawing.Size(223, 21);
-            this.BookCategoryRemoveCB.TabIndex = 2;
+            this.BookQuantityToRemoveTB.Location = new System.Drawing.Point(201, 189);
+            this.BookQuantityToRemoveTB.Name = "BookQuantityToRemoveTB";
+            this.BookQuantityToRemoveTB.Size = new System.Drawing.Size(221, 20);
+            this.BookQuantityToRemoveTB.TabIndex = 1;
             // 
-            // BookQuantityRemoveTB
+            // BookCategoryRemoveTB
             // 
-            this.BookQuantityRemoveTB.Location = new System.Drawing.Point(229, 170);
-            this.BookQuantityRemoveTB.Name = "BookQuantityRemoveTB";
-            this.BookQuantityRemoveTB.Size = new System.Drawing.Size(221, 20);
-            this.BookQuantityRemoveTB.TabIndex = 1;
+            this.BookCategoryRemoveTB.Location = new System.Drawing.Point(201, 135);
+            this.BookCategoryRemoveTB.Name = "BookCategoryRemoveTB";
+            this.BookCategoryRemoveTB.Size = new System.Drawing.Size(221, 20);
+            this.BookCategoryRemoveTB.TabIndex = 1;
             // 
             // BookTitleRemoveTB
             // 
-            this.BookTitleRemoveTB.Location = new System.Drawing.Point(229, 86);
+            this.BookTitleRemoveTB.Location = new System.Drawing.Point(201, 86);
             this.BookTitleRemoveTB.Name = "BookTitleRemoveTB";
             this.BookTitleRemoveTB.Size = new System.Drawing.Size(221, 20);
             this.BookTitleRemoveTB.TabIndex = 1;
             // 
             // BookIDNumberRemoveTB
             // 
-            this.BookIDNumberRemoveTB.Location = new System.Drawing.Point(229, 31);
+            this.BookIDNumberRemoveTB.Location = new System.Drawing.Point(203, 31);
             this.BookIDNumberRemoveTB.Name = "BookIDNumberRemoveTB";
             this.BookIDNumberRemoveTB.Size = new System.Drawing.Size(221, 20);
             this.BookIDNumberRemoveTB.TabIndex = 1;
             // 
-            // BookAddButton
+            // BookQuantityToRemoveLabel
             // 
-            this.BookAddButton.Location = new System.Drawing.Point(223, 250);
-            this.BookAddButton.Name = "BookAddButton";
-            this.BookAddButton.Size = new System.Drawing.Size(195, 45);
-            this.BookAddButton.TabIndex = 3;
-            this.BookAddButton.Text = "Dodaj książke";
-            this.BookAddButton.UseVisualStyleBackColor = true;
+            this.BookQuantityToRemoveLabel.AutoSize = true;
+            this.BookQuantityToRemoveLabel.Location = new System.Drawing.Point(30, 189);
+            this.BookQuantityToRemoveLabel.Name = "BookQuantityToRemoveLabel";
+            this.BookQuantityToRemoveLabel.Size = new System.Drawing.Size(131, 13);
+            this.BookQuantityToRemoveLabel.TabIndex = 0;
+            this.BookQuantityToRemoveLabel.Text = "Ilość książek do usunięcia";
             // 
             // BookRemoveButton
             // 
-            this.BookRemoveButton.Location = new System.Drawing.Point(202, 560);
+            this.BookRemoveButton.Location = new System.Drawing.Point(173, 233);
             this.BookRemoveButton.Name = "BookRemoveButton";
             this.BookRemoveButton.Size = new System.Drawing.Size(195, 45);
             this.BookRemoveButton.TabIndex = 3;
             this.BookRemoveButton.Text = "Usuń książke";
             this.BookRemoveButton.UseVisualStyleBackColor = true;
+            this.BookRemoveButton.Click += new System.EventHandler(this.BookRemoveButton_Click);
+            // 
+            // BookAddButton
+            // 
+            this.BookAddButton.Location = new System.Drawing.Point(153, 208);
+            this.BookAddButton.Name = "BookAddButton";
+            this.BookAddButton.Size = new System.Drawing.Size(202, 56);
+            this.BookAddButton.TabIndex = 3;
+            this.BookAddButton.Text = "dodaj";
+            this.BookAddButton.UseVisualStyleBackColor = true;
+            this.BookAddButton.Click += new System.EventHandler(this.BookAddButton_Click);
             // 
             // BookManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 631);
-            this.Controls.Add(this.BookRemoveButton);
-            this.Controls.Add(this.BookAddButton);
+            this.ClientSize = new System.Drawing.Size(633, 663);
             this.Controls.Add(this.BookRemoveGB);
             this.Controls.Add(this.BookAddGB);
             this.Name = "BookManageForm";
@@ -262,18 +263,18 @@
         private System.Windows.Forms.Label BookIDNumberRemoveLabel;
         private System.Windows.Forms.Label BookTitleRemoveLabel;
         private System.Windows.Forms.Label BookCategoryRemoveLabel;
-        private System.Windows.Forms.Label BookQuantityRemoveLabel;
         private System.Windows.Forms.GroupBox BookAddGB;
         private System.Windows.Forms.ComboBox BookCategoryCB;
-        private System.Windows.Forms.TextBox BookQuantityCB;
-        private System.Windows.Forms.TextBox BookTitleCB;
+        private System.Windows.Forms.TextBox BookTitleTB;
         private System.Windows.Forms.TextBox BookIDNumberTB;
         private System.Windows.Forms.GroupBox BookRemoveGB;
-        private System.Windows.Forms.ComboBox BookCategoryRemoveCB;
-        private System.Windows.Forms.TextBox BookQuantityRemoveTB;
         private System.Windows.Forms.TextBox BookTitleRemoveTB;
         private System.Windows.Forms.TextBox BookIDNumberRemoveTB;
-        private System.Windows.Forms.Button BookAddButton;
         private System.Windows.Forms.Button BookRemoveButton;
+        private System.Windows.Forms.Label BookQuantityToRemoveLabel;
+        private System.Windows.Forms.TextBox BookQuantityTB;
+        private System.Windows.Forms.TextBox BookQuantityToRemoveTB;
+        private System.Windows.Forms.TextBox BookCategoryRemoveTB;
+        private System.Windows.Forms.Button BookAddButton;
     }
 }

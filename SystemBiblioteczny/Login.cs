@@ -24,7 +24,7 @@ namespace SystemBiblioteczny
             SystemBibliotecznyEntities123 content = new SystemBibliotecznyEntities123(); //połaczenie do bazy
             if (UsernameTB.Text != string.Empty && PasswordTB.Text != string.Empty) // sprawdzenie czy user i pass nie są puste
             {
-                var user = content.Admin.Where(x => x.Username.Equals(UsernameTB.Text)).FirstOrDefault(); // sprawdzenie username w tabeli Admin
+                var user = content.Admins.Where(x => x.Username.Equals(UsernameTB.Text)).FirstOrDefault(); // sprawdzenie username w tabeli Admin
                 if (user!=null) 
                 {
                     if (user.Password.Equals(PasswordTB.Text))

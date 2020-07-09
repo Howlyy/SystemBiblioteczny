@@ -25,6 +25,7 @@ namespace SystemBiblioteczny
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Admin> Admin { get; set; }
+        public virtual DbSet<Admin> Admins { get; set; }
+        public virtual DbSet<Book> Books { get; set; }
     }
 }
