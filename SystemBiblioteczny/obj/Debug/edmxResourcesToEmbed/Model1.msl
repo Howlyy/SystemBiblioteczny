@@ -21,5 +21,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="SystemBibliotecznyModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="TitleCategory" ColumnName="TitleCategory" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

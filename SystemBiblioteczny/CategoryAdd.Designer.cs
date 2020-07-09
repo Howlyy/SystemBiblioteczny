@@ -36,7 +36,7 @@
             // CategoryAddLabel
             // 
             this.CategoryAddLabel.AutoSize = true;
-            this.CategoryAddLabel.Location = new System.Drawing.Point(36, 71);
+            this.CategoryAddLabel.Location = new System.Drawing.Point(24, 71);
             this.CategoryAddLabel.Name = "CategoryAddLabel";
             this.CategoryAddLabel.Size = new System.Drawing.Size(135, 13);
             this.CategoryAddLabel.TabIndex = 0;
@@ -50,6 +50,7 @@
             this.CategoryAddButton.TabIndex = 1;
             this.CategoryAddButton.Text = "Dodaj kategorie";
             this.CategoryAddButton.UseVisualStyleBackColor = true;
+            this.CategoryAddButton.Click += new System.EventHandler(this.CategoryAddButton_Click);
             // 
             // CategoryAddTB
             // 

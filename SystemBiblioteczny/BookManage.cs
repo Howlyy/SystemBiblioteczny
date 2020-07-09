@@ -12,21 +12,25 @@ namespace SystemBiblioteczny
 {
     public partial class BookManageForm : Form
     {
+        SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123();
         public BookManageForm()
         {
             InitializeComponent();
+            BookCategoryCB.DataSource = context.Categories.ToList();
+            BookCategoryCB.DisplayMember = "TitleCategory";
         }
 
         private void BookAddButton_Click(object sender, EventArgs e) /// Funkcja przycisnięcia buttona dodaj ksiazke
         {
-            SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123();
+            
             Book book = new Book(); // nowa instacja book
             book.BookID = BookIDNumberTB.Text;
             book.Title = BookTitleTB.Text;
-            book.Category = BookCategoryCB.SelectedText;
+            book.Category = BookCategoryCB.Text;
             book.Quantity = Convert.ToInt32(BookQuantityTB.Text);
             context.Books.Add(book);
             context.SaveChanges();
+            MessageBox.Show("Dodano ksiazke");
 
 
         }
@@ -34,7 +38,7 @@ namespace SystemBiblioteczny
 
        /* private void BookSearchButton_Click(object sender, EventArgs e)
         {
-            SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123();
+            
             var book = context.Books.Where(x => x.BookID == BookIDNumberRemoveTB.Text).FirstOrDefault(); // jednak ksiazka o numerze id ksiazki
             BookTitleRemoveTB.Text = book.Title;
             BookCategoryRemoveTB.Text = book.Category;
@@ -46,7 +50,7 @@ namespace SystemBiblioteczny
 
         private void BookRemoveButton_Click(object sender, EventArgs e)
         {
-            SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123();
+            
             var book = context.Books.Where(x => x.BookID == BookIDNumberRemoveTB.Text).FirstOrDefault(); 
             var bookQuantity = book.Quantity - Convert.ToInt32(BookQuantityToRemoveTB.Text);
             book.Quantity = bookQuantity;
@@ -56,7 +60,11 @@ namespace SystemBiblioteczny
             MessageBox.Show("Ksiazka " + BookTitleRemoveTB.Text +  " usunieta!");
         }
 
-        
+        private void BookCategoryCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+
+        }
     }
 }
 

@@ -7,6 +7,7 @@
       <Diagram DiagramId="ba21843c1ac346d4b472660e4b732ad8" Name="Diagram1">
         <EntityTypeShape EntityType="SystemBibliotecznyModel.Admin" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SystemBibliotecznyModel.Book" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SystemBibliotecznyModel.Category" Width="1.5" PointX="5.125" PointY="0.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

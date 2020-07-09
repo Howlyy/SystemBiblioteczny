@@ -35,8 +35,9 @@
             this.BookCategoryLabel = new System.Windows.Forms.Label();
             this.BookTitleLabel = new System.Windows.Forms.Label();
             this.SearchingResultGB = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DataGrid = new System.Windows.Forms.DataGridView();
             this.BookDataGB = new System.Windows.Forms.GroupBox();
+            this.BookIssueButton = new System.Windows.Forms.Button();
             this.StudentIDGBTB = new System.Windows.Forms.TextBox();
             this.BookIDGBTB = new System.Windows.Forms.TextBox();
             this.BookCategoryGBTB = new System.Windows.Forms.TextBox();
@@ -49,10 +50,14 @@
             this.BookQuantityGBLabel = new System.Windows.Forms.Label();
             this.BookAuthorGBLabel = new System.Windows.Forms.Label();
             this.BookTitleGBLabel = new System.Windows.Forms.Label();
-            this.BookIssueButton = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numer_ID_Ksiazki = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookTitleCategoryGB.SuspendLayout();
             this.SearchingResultGB.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
             this.BookDataGB.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +83,7 @@
             this.BookCategoryTitleSearchButton.TabIndex = 4;
             this.BookCategoryTitleSearchButton.Text = "Szukaj";
             this.BookCategoryTitleSearchButton.UseVisualStyleBackColor = true;
+            this.BookCategoryTitleSearchButton.Click += new System.EventHandler(this.BookCategoryTitleSearchButton_Click);
             // 
             // BookCategoryCB
             // 
@@ -86,6 +92,7 @@
             this.BookCategoryCB.Name = "BookCategoryCB";
             this.BookCategoryCB.Size = new System.Drawing.Size(150, 21);
             this.BookCategoryCB.TabIndex = 3;
+            this.BookCategoryCB.SelectedIndexChanged += new System.EventHandler(this.BookCategoryCB_SelectedIndexChanged);
             // 
             // BookTitleCB
             // 
@@ -115,7 +122,7 @@
             // 
             // SearchingResultGB
             // 
-            this.SearchingResultGB.Controls.Add(this.dataGridView1);
+            this.SearchingResultGB.Controls.Add(this.DataGrid);
             this.SearchingResultGB.Location = new System.Drawing.Point(438, 50);
             this.SearchingResultGB.Name = "SearchingResultGB";
             this.SearchingResultGB.Size = new System.Drawing.Size(502, 322);
@@ -123,13 +130,20 @@
             this.SearchingResultGB.TabStop = false;
             this.SearchingResultGB.Text = "groupBox2";
             // 
-            // dataGridView1
+            // DataGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(502, 287);
-            this.dataGridView1.TabIndex = 0;
+            this.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.Numer_ID_Ksiazki,
+            this.Title,
+            this.Quantity,
+            this.Category});
+            this.DataGrid.Location = new System.Drawing.Point(0, 19);
+            this.DataGrid.Name = "DataGrid";
+            this.DataGrid.Size = new System.Drawing.Size(502, 287);
+            this.DataGrid.TabIndex = 0;
+            this.DataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // BookDataGB
             // 
@@ -152,6 +166,15 @@
             this.BookDataGB.TabIndex = 2;
             this.BookDataGB.TabStop = false;
             this.BookDataGB.Text = "Dane ksiązki";
+            // 
+            // BookIssueButton
+            // 
+            this.BookIssueButton.Location = new System.Drawing.Point(408, 159);
+            this.BookIssueButton.Name = "BookIssueButton";
+            this.BookIssueButton.Size = new System.Drawing.Size(141, 43);
+            this.BookIssueButton.TabIndex = 2;
+            this.BookIssueButton.Text = "Wypożycz książke";
+            this.BookIssueButton.UseVisualStyleBackColor = true;
             // 
             // StudentIDGBTB
             // 
@@ -249,14 +272,35 @@
             this.BookTitleGBLabel.TabIndex = 0;
             this.BookTitleGBLabel.Text = "Tytuł książki";
             // 
-            // BookIssueButton
+            // Id
             // 
-            this.BookIssueButton.Location = new System.Drawing.Point(408, 159);
-            this.BookIssueButton.Name = "BookIssueButton";
-            this.BookIssueButton.Size = new System.Drawing.Size(141, 43);
-            this.BookIssueButton.TabIndex = 2;
-            this.BookIssueButton.Text = "Wypożycz książke";
-            this.BookIssueButton.UseVisualStyleBackColor = true;
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            // 
+            // Numer_ID_Ksiazki
+            // 
+            this.Numer_ID_Ksiazki.DataPropertyName = "BookID";
+            this.Numer_ID_Ksiazki.HeaderText = "Numer_ID_Ksiazki";
+            this.Numer_ID_Ksiazki.Name = "Numer_ID_Ksiazki";
+            // 
+            // Title
+            // 
+            this.Title.DataPropertyName = "Title";
+            this.Title.HeaderText = "Title";
+            this.Title.Name = "Title";
+            // 
+            // Quantity
+            // 
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            // 
+            // Category
+            // 
+            this.Category.DataPropertyName = "Category";
+            this.Category.HeaderText = "Category";
+            this.Category.Name = "Category";
             // 
             // BookSearchingForm
             // 
@@ -271,7 +315,7 @@
             this.BookTitleCategoryGB.ResumeLayout(false);
             this.BookTitleCategoryGB.PerformLayout();
             this.SearchingResultGB.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
             this.BookDataGB.ResumeLayout(false);
             this.BookDataGB.PerformLayout();
             this.ResumeLayout(false);
@@ -287,7 +331,7 @@
         private System.Windows.Forms.ComboBox BookCategoryCB;
         private System.Windows.Forms.ComboBox BookTitleCB;
         private System.Windows.Forms.GroupBox SearchingResultGB;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DataGrid;
         private System.Windows.Forms.GroupBox BookDataGB;
         private System.Windows.Forms.TextBox StudentIDGBTB;
         private System.Windows.Forms.TextBox BookIDGBTB;
@@ -302,5 +346,10 @@
         private System.Windows.Forms.Label BookAuthorGBLabel;
         private System.Windows.Forms.Label BookTitleGBLabel;
         private System.Windows.Forms.Button BookIssueButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numer_ID_Ksiazki;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Title;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
     }
 }

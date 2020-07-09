@@ -36,18 +36,18 @@
             this.BookTitleRemoveLabel = new System.Windows.Forms.Label();
             this.BookCategoryRemoveLabel = new System.Windows.Forms.Label();
             this.BookAddGB = new System.Windows.Forms.GroupBox();
+            this.BookAddButton = new System.Windows.Forms.Button();
             this.BookCategoryCB = new System.Windows.Forms.ComboBox();
             this.BookQuantityTB = new System.Windows.Forms.TextBox();
             this.BookTitleTB = new System.Windows.Forms.TextBox();
             this.BookIDNumberTB = new System.Windows.Forms.TextBox();
             this.BookRemoveGB = new System.Windows.Forms.GroupBox();
+            this.BookRemoveButton = new System.Windows.Forms.Button();
             this.BookQuantityToRemoveTB = new System.Windows.Forms.TextBox();
             this.BookCategoryRemoveTB = new System.Windows.Forms.TextBox();
             this.BookTitleRemoveTB = new System.Windows.Forms.TextBox();
             this.BookIDNumberRemoveTB = new System.Windows.Forms.TextBox();
             this.BookQuantityToRemoveLabel = new System.Windows.Forms.Label();
-            this.BookRemoveButton = new System.Windows.Forms.Button();
-            this.BookAddButton = new System.Windows.Forms.Button();
             this.BookAddGB.SuspendLayout();
             this.BookRemoveGB.SuspendLayout();
             this.SuspendLayout();
@@ -133,6 +133,16 @@
             this.BookAddGB.TabStop = false;
             this.BookAddGB.Text = "Dodawanie książki";
             // 
+            // BookAddButton
+            // 
+            this.BookAddButton.Location = new System.Drawing.Point(153, 208);
+            this.BookAddButton.Name = "BookAddButton";
+            this.BookAddButton.Size = new System.Drawing.Size(202, 56);
+            this.BookAddButton.TabIndex = 3;
+            this.BookAddButton.Text = "dodaj";
+            this.BookAddButton.UseVisualStyleBackColor = true;
+            this.BookAddButton.Click += new System.EventHandler(this.BookAddButton_Click);
+            // 
             // BookCategoryCB
             // 
             this.BookCategoryCB.FormattingEnabled = true;
@@ -140,6 +150,7 @@
             this.BookCategoryCB.Name = "BookCategoryCB";
             this.BookCategoryCB.Size = new System.Drawing.Size(221, 21);
             this.BookCategoryCB.TabIndex = 2;
+            this.BookCategoryCB.SelectedIndexChanged += new System.EventHandler(this.BookCategoryCB_SelectedIndexChanged);
             // 
             // BookQuantityTB
             // 
@@ -180,6 +191,16 @@
             this.BookRemoveGB.TabStop = false;
             this.BookRemoveGB.Text = "Usuwanie książki";
             // 
+            // BookRemoveButton
+            // 
+            this.BookRemoveButton.Location = new System.Drawing.Point(173, 233);
+            this.BookRemoveButton.Name = "BookRemoveButton";
+            this.BookRemoveButton.Size = new System.Drawing.Size(195, 45);
+            this.BookRemoveButton.TabIndex = 3;
+            this.BookRemoveButton.Text = "Usuń książke";
+            this.BookRemoveButton.UseVisualStyleBackColor = true;
+            this.BookRemoveButton.Click += new System.EventHandler(this.BookRemoveButton_Click);
+            // 
             // BookQuantityToRemoveTB
             // 
             this.BookQuantityToRemoveTB.Location = new System.Drawing.Point(201, 189);
@@ -216,26 +237,6 @@
             this.BookQuantityToRemoveLabel.Size = new System.Drawing.Size(131, 13);
             this.BookQuantityToRemoveLabel.TabIndex = 0;
             this.BookQuantityToRemoveLabel.Text = "Ilość książek do usunięcia";
-            // 
-            // BookRemoveButton
-            // 
-            this.BookRemoveButton.Location = new System.Drawing.Point(173, 233);
-            this.BookRemoveButton.Name = "BookRemoveButton";
-            this.BookRemoveButton.Size = new System.Drawing.Size(195, 45);
-            this.BookRemoveButton.TabIndex = 3;
-            this.BookRemoveButton.Text = "Usuń książke";
-            this.BookRemoveButton.UseVisualStyleBackColor = true;
-            this.BookRemoveButton.Click += new System.EventHandler(this.BookRemoveButton_Click);
-            // 
-            // BookAddButton
-            // 
-            this.BookAddButton.Location = new System.Drawing.Point(153, 208);
-            this.BookAddButton.Name = "BookAddButton";
-            this.BookAddButton.Size = new System.Drawing.Size(202, 56);
-            this.BookAddButton.TabIndex = 3;
-            this.BookAddButton.Text = "dodaj";
-            this.BookAddButton.UseVisualStyleBackColor = true;
-            this.BookAddButton.Click += new System.EventHandler(this.BookAddButton_Click);
             // 
             // BookManageForm
             // 
