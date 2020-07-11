@@ -36,25 +36,23 @@
             this.BookTitleLabel = new System.Windows.Forms.Label();
             this.SearchingResultGB = new System.Windows.Forms.GroupBox();
             this.DataGrid = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numer_ID_Ksiazki = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookDataGB = new System.Windows.Forms.GroupBox();
             this.BookIssueButton = new System.Windows.Forms.Button();
             this.StudentIDGBTB = new System.Windows.Forms.TextBox();
             this.BookIDGBTB = new System.Windows.Forms.TextBox();
             this.BookCategoryGBTB = new System.Windows.Forms.TextBox();
             this.BookQuantityGBTB = new System.Windows.Forms.TextBox();
-            this.BookAutorGBTB = new System.Windows.Forms.TextBox();
             this.BookTitleGBTB = new System.Windows.Forms.TextBox();
             this.StudentIDGBLabel = new System.Windows.Forms.Label();
             this.BookIDGBLabel = new System.Windows.Forms.Label();
             this.BookCategoryGBLabel = new System.Windows.Forms.Label();
             this.BookQuantityGBLabel = new System.Windows.Forms.Label();
-            this.BookAuthorGBLabel = new System.Windows.Forms.Label();
             this.BookTitleGBLabel = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numer_ID_Ksiazki = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookTitleCategoryGB.SuspendLayout();
             this.SearchingResultGB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
@@ -92,7 +90,6 @@
             this.BookCategoryCB.Name = "BookCategoryCB";
             this.BookCategoryCB.Size = new System.Drawing.Size(150, 21);
             this.BookCategoryCB.TabIndex = 3;
-            this.BookCategoryCB.SelectedIndexChanged += new System.EventHandler(this.BookCategoryCB_SelectedIndexChanged);
             // 
             // BookTitleCB
             // 
@@ -143,7 +140,37 @@
             this.DataGrid.Name = "DataGrid";
             this.DataGrid.Size = new System.Drawing.Size(502, 287);
             this.DataGrid.TabIndex = 0;
-            this.DataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.DataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_CellClick);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            // 
+            // Numer_ID_Ksiazki
+            // 
+            this.Numer_ID_Ksiazki.DataPropertyName = "BookID";
+            this.Numer_ID_Ksiazki.HeaderText = "Numer_ID_Ksiazki";
+            this.Numer_ID_Ksiazki.Name = "Numer_ID_Ksiazki";
+            // 
+            // Title
+            // 
+            this.Title.DataPropertyName = "Title";
+            this.Title.HeaderText = "Title";
+            this.Title.Name = "Title";
+            // 
+            // Quantity
+            // 
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            // 
+            // Category
+            // 
+            this.Category.DataPropertyName = "Category";
+            this.Category.HeaderText = "Category";
+            this.Category.Name = "Category";
             // 
             // BookDataGB
             // 
@@ -152,13 +179,11 @@
             this.BookDataGB.Controls.Add(this.BookIDGBTB);
             this.BookDataGB.Controls.Add(this.BookCategoryGBTB);
             this.BookDataGB.Controls.Add(this.BookQuantityGBTB);
-            this.BookDataGB.Controls.Add(this.BookAutorGBTB);
             this.BookDataGB.Controls.Add(this.BookTitleGBTB);
             this.BookDataGB.Controls.Add(this.StudentIDGBLabel);
             this.BookDataGB.Controls.Add(this.BookIDGBLabel);
             this.BookDataGB.Controls.Add(this.BookCategoryGBLabel);
             this.BookDataGB.Controls.Add(this.BookQuantityGBLabel);
-            this.BookDataGB.Controls.Add(this.BookAuthorGBLabel);
             this.BookDataGB.Controls.Add(this.BookTitleGBLabel);
             this.BookDataGB.Location = new System.Drawing.Point(42, 378);
             this.BookDataGB.Name = "BookDataGB";
@@ -175,6 +200,7 @@
             this.BookIssueButton.TabIndex = 2;
             this.BookIssueButton.Text = "Wypożycz książke";
             this.BookIssueButton.UseVisualStyleBackColor = true;
+            this.BookIssueButton.Click += new System.EventHandler(this.BookIssueButton_Click);
             // 
             // StudentIDGBTB
             // 
@@ -199,17 +225,10 @@
             // 
             // BookQuantityGBTB
             // 
-            this.BookQuantityGBTB.Location = new System.Drawing.Point(166, 106);
+            this.BookQuantityGBTB.Location = new System.Drawing.Point(166, 90);
             this.BookQuantityGBTB.Name = "BookQuantityGBTB";
             this.BookQuantityGBTB.Size = new System.Drawing.Size(102, 20);
             this.BookQuantityGBTB.TabIndex = 1;
-            // 
-            // BookAutorGBTB
-            // 
-            this.BookAutorGBTB.Location = new System.Drawing.Point(166, 73);
-            this.BookAutorGBTB.Name = "BookAutorGBTB";
-            this.BookAutorGBTB.Size = new System.Drawing.Size(102, 20);
-            this.BookAutorGBTB.TabIndex = 1;
             // 
             // BookTitleGBTB
             // 
@@ -248,20 +267,11 @@
             // BookQuantityGBLabel
             // 
             this.BookQuantityGBLabel.AutoSize = true;
-            this.BookQuantityGBLabel.Location = new System.Drawing.Point(44, 113);
+            this.BookQuantityGBLabel.Location = new System.Drawing.Point(43, 93);
             this.BookQuantityGBLabel.Name = "BookQuantityGBLabel";
             this.BookQuantityGBLabel.Size = new System.Drawing.Size(68, 13);
             this.BookQuantityGBLabel.TabIndex = 0;
             this.BookQuantityGBLabel.Text = "Ilość ksiązek";
-            // 
-            // BookAuthorGBLabel
-            // 
-            this.BookAuthorGBLabel.AutoSize = true;
-            this.BookAuthorGBLabel.Location = new System.Drawing.Point(44, 80);
-            this.BookAuthorGBLabel.Name = "BookAuthorGBLabel";
-            this.BookAuthorGBLabel.Size = new System.Drawing.Size(35, 13);
-            this.BookAuthorGBLabel.TabIndex = 0;
-            this.BookAuthorGBLabel.Text = "Autor ";
             // 
             // BookTitleGBLabel
             // 
@@ -271,36 +281,6 @@
             this.BookTitleGBLabel.Size = new System.Drawing.Size(67, 13);
             this.BookTitleGBLabel.TabIndex = 0;
             this.BookTitleGBLabel.Text = "Tytuł książki";
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            // 
-            // Numer_ID_Ksiazki
-            // 
-            this.Numer_ID_Ksiazki.DataPropertyName = "BookID";
-            this.Numer_ID_Ksiazki.HeaderText = "Numer_ID_Ksiazki";
-            this.Numer_ID_Ksiazki.Name = "Numer_ID_Ksiazki";
-            // 
-            // Title
-            // 
-            this.Title.DataPropertyName = "Title";
-            this.Title.HeaderText = "Title";
-            this.Title.Name = "Title";
-            // 
-            // Quantity
-            // 
-            this.Quantity.DataPropertyName = "Quantity";
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            // 
-            // Category
-            // 
-            this.Category.DataPropertyName = "Category";
-            this.Category.HeaderText = "Category";
-            this.Category.Name = "Category";
             // 
             // BookSearchingForm
             // 
@@ -337,13 +317,11 @@
         private System.Windows.Forms.TextBox BookIDGBTB;
         private System.Windows.Forms.TextBox BookCategoryGBTB;
         private System.Windows.Forms.TextBox BookQuantityGBTB;
-        private System.Windows.Forms.TextBox BookAutorGBTB;
         private System.Windows.Forms.TextBox BookTitleGBTB;
         private System.Windows.Forms.Label StudentIDGBLabel;
         private System.Windows.Forms.Label BookIDGBLabel;
         private System.Windows.Forms.Label BookCategoryGBLabel;
         private System.Windows.Forms.Label BookQuantityGBLabel;
-        private System.Windows.Forms.Label BookAuthorGBLabel;
         private System.Windows.Forms.Label BookTitleGBLabel;
         private System.Windows.Forms.Button BookIssueButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;

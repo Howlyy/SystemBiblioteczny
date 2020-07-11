@@ -8,32 +8,58 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace SystemBiblioteczny
 {
-    public partial class BookSearchingForm : Form /// panel Szukania ksiazki 
+    /// <summary>
+    /// BookSearchingForm to panel służący do wyszukania i wypozyczenia ksiazki
+    /// </summary>
+
+    public partial class BookSearchingForm : Form 
     {
-        SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123(); // powiązanie
+        /// <summary>
+        /// 
+        /// </summary>
+         
         public BookSearchingForm() 
         {
+            SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123();
             InitializeComponent();
             BookCategoryCB.DataSource = context.Categories.ToList();
             BookCategoryCB.DisplayMember = "TitleCategory";
         }
 
-        private void BookCategoryCB_SelectedIndexChanged(object sender, EventArgs e)
+        
+
+       /// <summary>
+       ///  Metoda która jest uruchamiana po przyciśnieciu buttona 
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
+
+        private void BookCategoryTitleSearchButton_Click(object sender, EventArgs e) 
         {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void BookCategoryTitleSearchButton_Click(object sender, EventArgs e) /// Przycisk wyszukiwania na DataGridzie danych z bazy
-        {
+            SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123();
             var book = context.Books.Where(x => x.Title == BookTitleCB.Text || x.Category == BookCategoryCB.Text).ToList();
             DataGrid.DataSource = book;
+        }
+
+        private void DataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var title = DataGrid.Rows[e.RowIndex].Cells[2].Value;
+            var Quantity = DataGrid.Rows[e.RowIndex].Cells[4].Value;
+            var category = DataGrid.Rows[e.RowIndex].Cells[3].Value;
+            var BookId = DataGrid.Rows[e.RowIndex].Cells[1].Value;
+            BookTitleGBTB.Text = title.ToString();
+            BookQuantityGBTB.Text = Quantity.ToString();
+            BookCategoryGBTB.Text = category.ToString();
+            BookIDGBTB.Text = BookId.ToString();
+        }
+
+        private void BookIssueButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,5 +28,6 @@ namespace SystemBiblioteczny
         public virtual DbSet<Admin> Admins { get; set; }
         public virtual DbSet<Book> Books { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Issue> Issues { get; set; }
     }
 }
