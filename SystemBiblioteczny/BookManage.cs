@@ -12,7 +12,8 @@ namespace SystemBiblioteczny
 {
     public partial class BookManageForm : Form
     {
-        SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123();
+        SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123(); // przez context mamy dostep do dany z bazy
+
         public BookManageForm()
         {
             InitializeComponent();
