@@ -42,12 +42,15 @@
             this.BookTitleTB = new System.Windows.Forms.TextBox();
             this.BookIDNumberTB = new System.Windows.Forms.TextBox();
             this.BookRemoveGB = new System.Windows.Forms.GroupBox();
+            this.BookSearchButton = new System.Windows.Forms.Button();
             this.BookRemoveButton = new System.Windows.Forms.Button();
+            this.BookQuantityAviableTB = new System.Windows.Forms.TextBox();
             this.BookQuantityToRemoveTB = new System.Windows.Forms.TextBox();
             this.BookCategoryRemoveTB = new System.Windows.Forms.TextBox();
             this.BookTitleRemoveTB = new System.Windows.Forms.TextBox();
             this.BookIDNumberRemoveTB = new System.Windows.Forms.TextBox();
             this.BookQuantityToRemoveLabel = new System.Windows.Forms.Label();
+            this.BookQuantityAviableLabel = new System.Windows.Forms.Label();
             this.BookAddGB.SuspendLayout();
             this.BookRemoveGB.SuspendLayout();
             this.SuspendLayout();
@@ -100,7 +103,7 @@
             // BookTitleRemoveLabel
             // 
             this.BookTitleRemoveLabel.AutoSize = true;
-            this.BookTitleRemoveLabel.Location = new System.Drawing.Point(46, 89);
+            this.BookTitleRemoveLabel.Location = new System.Drawing.Point(46, 72);
             this.BookTitleRemoveLabel.Name = "BookTitleRemoveLabel";
             this.BookTitleRemoveLabel.Size = new System.Drawing.Size(67, 13);
             this.BookTitleRemoveLabel.TabIndex = 0;
@@ -109,7 +112,7 @@
             // BookCategoryRemoveLabel
             // 
             this.BookCategoryRemoveLabel.AutoSize = true;
-            this.BookCategoryRemoveLabel.Location = new System.Drawing.Point(46, 135);
+            this.BookCategoryRemoveLabel.Location = new System.Drawing.Point(46, 116);
             this.BookCategoryRemoveLabel.Name = "BookCategoryRemoveLabel";
             this.BookCategoryRemoveLabel.Size = new System.Drawing.Size(52, 13);
             this.BookCategoryRemoveLabel.TabIndex = 0;
@@ -175,11 +178,14 @@
             // 
             // BookRemoveGB
             // 
+            this.BookRemoveGB.Controls.Add(this.BookSearchButton);
             this.BookRemoveGB.Controls.Add(this.BookRemoveButton);
+            this.BookRemoveGB.Controls.Add(this.BookQuantityAviableTB);
             this.BookRemoveGB.Controls.Add(this.BookQuantityToRemoveTB);
             this.BookRemoveGB.Controls.Add(this.BookCategoryRemoveTB);
             this.BookRemoveGB.Controls.Add(this.BookTitleRemoveTB);
             this.BookRemoveGB.Controls.Add(this.BookIDNumberRemoveTB);
+            this.BookRemoveGB.Controls.Add(this.BookQuantityAviableLabel);
             this.BookRemoveGB.Controls.Add(this.BookQuantityToRemoveLabel);
             this.BookRemoveGB.Controls.Add(this.BookCategoryRemoveLabel);
             this.BookRemoveGB.Controls.Add(this.BookTitleRemoveLabel);
@@ -191,6 +197,16 @@
             this.BookRemoveGB.TabStop = false;
             this.BookRemoveGB.Text = "Usuwanie książki";
             // 
+            // BookSearchButton
+            // 
+            this.BookSearchButton.Location = new System.Drawing.Point(458, 18);
+            this.BookSearchButton.Name = "BookSearchButton";
+            this.BookSearchButton.Size = new System.Drawing.Size(81, 45);
+            this.BookSearchButton.TabIndex = 3;
+            this.BookSearchButton.Text = "Szukaj";
+            this.BookSearchButton.UseVisualStyleBackColor = true;
+            this.BookSearchButton.Click += new System.EventHandler(this.BookSearchButton_Click);
+            // 
             // BookRemoveButton
             // 
             this.BookRemoveButton.Location = new System.Drawing.Point(173, 233);
@@ -201,23 +217,30 @@
             this.BookRemoveButton.UseVisualStyleBackColor = true;
             this.BookRemoveButton.Click += new System.EventHandler(this.BookRemoveButton_Click);
             // 
+            // BookQuantityAviableTB
+            // 
+            this.BookQuantityAviableTB.Location = new System.Drawing.Point(201, 158);
+            this.BookQuantityAviableTB.Name = "BookQuantityAviableTB";
+            this.BookQuantityAviableTB.Size = new System.Drawing.Size(221, 20);
+            this.BookQuantityAviableTB.TabIndex = 1;
+            // 
             // BookQuantityToRemoveTB
             // 
-            this.BookQuantityToRemoveTB.Location = new System.Drawing.Point(201, 189);
+            this.BookQuantityToRemoveTB.Location = new System.Drawing.Point(201, 196);
             this.BookQuantityToRemoveTB.Name = "BookQuantityToRemoveTB";
             this.BookQuantityToRemoveTB.Size = new System.Drawing.Size(221, 20);
             this.BookQuantityToRemoveTB.TabIndex = 1;
             // 
             // BookCategoryRemoveTB
             // 
-            this.BookCategoryRemoveTB.Location = new System.Drawing.Point(201, 135);
+            this.BookCategoryRemoveTB.Location = new System.Drawing.Point(201, 116);
             this.BookCategoryRemoveTB.Name = "BookCategoryRemoveTB";
             this.BookCategoryRemoveTB.Size = new System.Drawing.Size(221, 20);
             this.BookCategoryRemoveTB.TabIndex = 1;
             // 
             // BookTitleRemoveTB
             // 
-            this.BookTitleRemoveTB.Location = new System.Drawing.Point(201, 86);
+            this.BookTitleRemoveTB.Location = new System.Drawing.Point(201, 72);
             this.BookTitleRemoveTB.Name = "BookTitleRemoveTB";
             this.BookTitleRemoveTB.Size = new System.Drawing.Size(221, 20);
             this.BookTitleRemoveTB.TabIndex = 1;
@@ -232,11 +255,20 @@
             // BookQuantityToRemoveLabel
             // 
             this.BookQuantityToRemoveLabel.AutoSize = true;
-            this.BookQuantityToRemoveLabel.Location = new System.Drawing.Point(30, 189);
+            this.BookQuantityToRemoveLabel.Location = new System.Drawing.Point(30, 196);
             this.BookQuantityToRemoveLabel.Name = "BookQuantityToRemoveLabel";
             this.BookQuantityToRemoveLabel.Size = new System.Drawing.Size(131, 13);
             this.BookQuantityToRemoveLabel.TabIndex = 0;
             this.BookQuantityToRemoveLabel.Text = "Ilość książek do usunięcia";
+            // 
+            // BookQuantityAviableLabel
+            // 
+            this.BookQuantityAviableLabel.AutoSize = true;
+            this.BookQuantityAviableLabel.Location = new System.Drawing.Point(30, 165);
+            this.BookQuantityAviableLabel.Name = "BookQuantityAviableLabel";
+            this.BookQuantityAviableLabel.Size = new System.Drawing.Size(126, 13);
+            this.BookQuantityAviableLabel.TabIndex = 0;
+            this.BookQuantityAviableLabel.Text = "Ilość dostepnych ksiazek";
             // 
             // BookManageForm
             // 
@@ -277,5 +309,8 @@
         private System.Windows.Forms.TextBox BookQuantityToRemoveTB;
         private System.Windows.Forms.TextBox BookCategoryRemoveTB;
         private System.Windows.Forms.Button BookAddButton;
+        private System.Windows.Forms.Button BookSearchButton;
+        private System.Windows.Forms.TextBox BookQuantityAviableTB;
+        private System.Windows.Forms.Label BookQuantityAviableLabel;
     }
 }

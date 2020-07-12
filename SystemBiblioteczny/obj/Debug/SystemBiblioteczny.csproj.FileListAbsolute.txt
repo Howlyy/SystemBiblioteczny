@@ -23,3 +23,4 @@ C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemB
 C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\bin\Debug\Castle.Core.xml
 C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\bin\Debug\NSubstitute.xml
 C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\obj\Debug\SystemBiblioteczny.MainForm.resources

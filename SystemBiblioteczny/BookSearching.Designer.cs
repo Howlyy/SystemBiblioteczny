@@ -141,6 +141,7 @@
             this.DataGrid.Size = new System.Drawing.Size(502, 287);
             this.DataGrid.TabIndex = 0;
             this.DataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_CellClick);
+            
             // 
             // Id
             // 

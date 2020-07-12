@@ -30,6 +30,8 @@ namespace SystemBiblioteczny
                     if (user.Password.Equals(PasswordTB.Text))
                     {
                         MessageBox.Show("Zalogowano!");
+                        new MainForm().Show();
+                        this.Hide();
                     }
                     else
                     {
