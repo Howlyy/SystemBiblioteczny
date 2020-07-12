@@ -8,7 +8,7 @@
         <EntityTypeShape EntityType="SystemBibliotecznyModel.Admin" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SystemBibliotecznyModel.Book" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SystemBibliotecznyModel.Category" Width="1.5" PointX="5.125" PointY="0.875" />
-        <EntityTypeShape EntityType="SystemBibliotecznyModel.Issue" Width="1.5" PointX="7.125" PointY="0.875" />
+        <EntityTypeShape EntityType="SystemBibliotecznyModel.Issue" Width="1.5" PointX="0.75" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -33,7 +33,7 @@ namespace SystemBiblioteczny
         
 
        /// <summary>
-       ///  Metoda która jest uruchamiana po przyciśnieciu buttona 
+       ///  Metoda przycisku Szukaj. Po przycisnieciu wyrzuca nam dane z tabeli Book na datagrida
        /// </summary>
        /// <param name="sender"></param>
        /// <param name="e"></param>
@@ -45,6 +45,11 @@ namespace SystemBiblioteczny
             DataGrid.DataSource = book;
         }
 
+        /// <summary>
+        ///  Metoda panelu datagrid pokazująca baze z bazy 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var title = DataGrid.Rows[e.RowIndex].Cells[2].Value;
@@ -57,8 +62,31 @@ namespace SystemBiblioteczny
             BookIDGBTB.Text = BookId.ToString();
         }
 
+        /// <summary>
+        /// Metoda przycisku Wypożycz ksiażke. Po kliknięciu wykonuje operacje wypozyczenia z jednoczesnym sprawdzenie czy na stanie sa dane ksiazki
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BookIssueButton_Click(object sender, EventArgs e)
         {
+            SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123();
+            Issue book = new Issue();
+            book.IDStudenta = StudentIDGBTB.Text;
+            book.BookID = BookIDGBTB.Text;
+            book.IssueReturn = true;
+            var singlebook = context.Books.Where(x => x.BookID == BookIDGBTB.Text).FirstOrDefault();
+            if (singlebook.Quantity == 0)
+            {
+                MessageBox.Show("Nie ma tyle ksiazek!");
+            }
+            else
+            {
+                singlebook.Quantity -= 1;
+            }
+            
+            
+            context.Issues.Add(book);
+            context.SaveChanges();
 
         }
     }

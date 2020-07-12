@@ -30,8 +30,6 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TitleCategory" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'SystemBiblioteczny.dbo.Issue' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Issue">
           <Key>
             <PropertyRef Name="Id" />
@@ -39,22 +37,13 @@ warning 6002: The table/view 'SystemBiblioteczny.dbo.Issue' does not have a prim
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="BookID" Type="nvarchar" MaxLength="50" />
           <Property Name="IDStudenta" Type="nvarchar" MaxLength="50" />
-          <Property Name="Issue" Type="bit" />
-          <Property Name="Return" Type="bit" />
+          <Property Name="IssueReturn" Type="bit" />
         </EntityType>
         <EntityContainer Name="SystemBibliotecznyModelStoreContainer">
           <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Book" EntityType="Self.Book" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Issue" EntityType="Self.Issue" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Issue].[Id] AS [Id], 
-    [Issue].[BookID] AS [BookID], 
-    [Issue].[IDStudenta] AS [IDStudenta], 
-    [Issue].[Issue] AS [Issue], 
-    [Issue].[Return] AS [Return]
-    FROM [dbo].[Issue] AS [Issue]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="Issue" EntityType="Self.Issue" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -98,8 +87,7 @@ warning 6002: The table/view 'SystemBiblioteczny.dbo.Issue' does not have a prim
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BookID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IDStudenta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Issue1" Type="Boolean" />
-          <Property Name="Return" Type="Boolean" />
+          <Property Name="IssueReturn" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -138,8 +126,7 @@ warning 6002: The table/view 'SystemBiblioteczny.dbo.Issue' does not have a prim
           <EntitySetMapping Name="Issues">
             <EntityTypeMapping TypeName="SystemBibliotecznyModel.Issue">
               <MappingFragment StoreEntitySet="Issue">
-                <ScalarProperty Name="Return" ColumnName="Return" />
-                <ScalarProperty Name="Issue1" ColumnName="Issue" />
+                <ScalarProperty Name="IssueReturn" ColumnName="IssueReturn" />
                 <ScalarProperty Name="IDStudenta" ColumnName="IDStudenta" />
                 <ScalarProperty Name="BookID" ColumnName="BookID" />
                 <ScalarProperty Name="Id" ColumnName="Id" />

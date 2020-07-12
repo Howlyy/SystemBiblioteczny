@@ -17,7 +17,6 @@ namespace SystemBiblioteczny
         public int Id { get; set; }
         public string BookID { get; set; }
         public string IDStudenta { get; set; }
-        public Nullable<bool> Issue1 { get; set; }
-        public Nullable<bool> Return { get; set; }
+        public Nullable<bool> IssueReturn { get; set; }
     }
 }

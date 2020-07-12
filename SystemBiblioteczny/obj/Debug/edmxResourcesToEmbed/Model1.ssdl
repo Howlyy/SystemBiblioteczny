@@ -25,9 +25,19 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TitleCategory" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="Issue">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BookID" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDStudenta" Type="nvarchar" MaxLength="50" />
+    <Property Name="IssueReturn" Type="bit" />
+  </EntityType>
   <EntityContainer Name="SystemBibliotecznyModelStoreContainer">
     <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Book" EntityType="Self.Book" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Issue" EntityType="Self.Issue" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

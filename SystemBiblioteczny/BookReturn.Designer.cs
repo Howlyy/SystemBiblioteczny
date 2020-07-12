@@ -75,6 +75,7 @@
             this.BookReturnButton.TabIndex = 2;
             this.BookReturnButton.Text = "Oddaj książke";
             this.BookReturnButton.UseVisualStyleBackColor = true;
+            
             // 
             // BookReturnForm
             // 
