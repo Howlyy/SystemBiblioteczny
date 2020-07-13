@@ -10,17 +10,27 @@ using System.Windows.Forms;
 
 namespace SystemBiblioteczny
 {
+    /// <summary>
+    /// Klasa dla okna Menadzer ksiazek. 
+    /// </summary>
     public partial class BookManageForm : Form
     {
         SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123(); // przez context mamy dostep do dany z bazy
 
+        /// <summary>
+        /// Metoda dla okna Menadzera ksiazek
+        /// </summary>
         public BookManageForm()
         {
             InitializeComponent();
             BookCategoryCB.DataSource = context.Categories.ToList();
             BookCategoryCB.DisplayMember = "TitleCategory";
         }
-
+        /// <summary>
+        /// Metoda przycisku Dodaj ksiazke. Po przycisnieciu dodaje ksiazke do bazy biorac wartosci wpisane w TextBoxach
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BookAddButton_Click(object sender, EventArgs e) /// Funkcja przycisnięcia buttona dodaj ksiazke
         {
             
@@ -36,6 +46,11 @@ namespace SystemBiblioteczny
 
         }
 
+        /// <summary>
+        /// Metoda przycisku Szukaj. Po przycisnieciu szukan nam ksiazki po id i jednoczesnie wypelnia kolejne TextBoxy danymi z bazy
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void BookSearchButton_Click(object sender, EventArgs e)
         {
@@ -59,6 +74,11 @@ namespace SystemBiblioteczny
             
         }
 
+        /// <summary>
+        /// Metoda przycisku Usun ksiazke. Po przycisnieciu usuwa ksiazke z bazy przy jednoczesnym sprawdzeniu czy jest taka
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BookRemoveButton_Click(object sender, EventArgs e)
         {
             
@@ -75,19 +95,10 @@ namespace SystemBiblioteczny
                 context.SaveChanges();
                 MessageBox.Show("Ksiazka " + BookTitleRemoveTB.Text + " usunieta!");
             }
-           // var bookQuantity = book.Quantity - Convert.ToInt32(BookQuantityToRemoveTB.Text);
-            //book.Quantity = bookQuantity;
-
-            //context.Books.Remove(book);
-            //context.SaveChanges();
-            //MessageBox.Show("Ksiazka " + BookTitleRemoveTB.Text +  " usunieta!");
+           
         }
 
-        private void BookCategoryCB_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-
-        }
+       
 
         
     }

@@ -31,7 +31,6 @@
             this.BookTitleCategoryGB = new System.Windows.Forms.GroupBox();
             this.BookCategoryTitleSearchButton = new System.Windows.Forms.Button();
             this.BookCategoryCB = new System.Windows.Forms.ComboBox();
-            this.BookTitleCB = new System.Windows.Forms.ComboBox();
             this.BookCategoryLabel = new System.Windows.Forms.Label();
             this.BookTitleLabel = new System.Windows.Forms.Label();
             this.SearchingResultGB = new System.Windows.Forms.GroupBox();
@@ -53,6 +52,7 @@
             this.BookCategoryGBLabel = new System.Windows.Forms.Label();
             this.BookQuantityGBLabel = new System.Windows.Forms.Label();
             this.BookTitleGBLabel = new System.Windows.Forms.Label();
+            this.BookTitleTB = new System.Windows.Forms.TextBox();
             this.BookTitleCategoryGB.SuspendLayout();
             this.SearchingResultGB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
@@ -61,9 +61,9 @@
             // 
             // BookTitleCategoryGB
             // 
+            this.BookTitleCategoryGB.Controls.Add(this.BookTitleTB);
             this.BookTitleCategoryGB.Controls.Add(this.BookCategoryTitleSearchButton);
             this.BookTitleCategoryGB.Controls.Add(this.BookCategoryCB);
-            this.BookTitleCategoryGB.Controls.Add(this.BookTitleCB);
             this.BookTitleCategoryGB.Controls.Add(this.BookCategoryLabel);
             this.BookTitleCategoryGB.Controls.Add(this.BookTitleLabel);
             this.BookTitleCategoryGB.Location = new System.Drawing.Point(42, 50);
@@ -90,14 +90,6 @@
             this.BookCategoryCB.Name = "BookCategoryCB";
             this.BookCategoryCB.Size = new System.Drawing.Size(150, 21);
             this.BookCategoryCB.TabIndex = 3;
-            // 
-            // BookTitleCB
-            // 
-            this.BookTitleCB.FormattingEnabled = true;
-            this.BookTitleCB.Location = new System.Drawing.Point(170, 40);
-            this.BookTitleCB.Name = "BookTitleCB";
-            this.BookTitleCB.Size = new System.Drawing.Size(150, 21);
-            this.BookTitleCB.TabIndex = 3;
             // 
             // BookCategoryLabel
             // 
@@ -141,7 +133,6 @@
             this.DataGrid.Size = new System.Drawing.Size(502, 287);
             this.DataGrid.TabIndex = 0;
             this.DataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_CellClick);
-            
             // 
             // Id
             // 
@@ -283,6 +274,13 @@
             this.BookTitleGBLabel.TabIndex = 0;
             this.BookTitleGBLabel.Text = "Tytuł książki";
             // 
+            // BookTitleTB
+            // 
+            this.BookTitleTB.Location = new System.Drawing.Point(166, 45);
+            this.BookTitleTB.Name = "BookTitleTB";
+            this.BookTitleTB.Size = new System.Drawing.Size(147, 20);
+            this.BookTitleTB.TabIndex = 5;
+            // 
             // BookSearchingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,7 +308,6 @@
         private System.Windows.Forms.Label BookTitleLabel;
         private System.Windows.Forms.Button BookCategoryTitleSearchButton;
         private System.Windows.Forms.ComboBox BookCategoryCB;
-        private System.Windows.Forms.ComboBox BookTitleCB;
         private System.Windows.Forms.GroupBox SearchingResultGB;
         private System.Windows.Forms.DataGridView DataGrid;
         private System.Windows.Forms.GroupBox BookDataGB;
@@ -330,5 +327,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
+        private System.Windows.Forms.TextBox BookTitleTB;
     }
 }

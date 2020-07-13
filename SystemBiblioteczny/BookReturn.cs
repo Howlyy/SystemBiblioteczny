@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 namespace SystemBiblioteczny
 {
+    /// <summary>
+    /// Klasa dla okna zwrotu ksiazki.
+    /// </summary>
     public partial class BookReturnForm : Form
     {
         SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123();
@@ -18,7 +21,11 @@ namespace SystemBiblioteczny
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Metoda przycisku Oddaj ksiazke. Po przycisnieciu oddaje jedna ksiazke po BookID 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BookReturnButton_Click(object sender, EventArgs e)
         {
             var Issuebook = context.Issues.Where(x => x.BookID == BookIDEnterTB.Text && x.IssueReturn == true).FirstOrDefault();

@@ -153,7 +153,7 @@
             this.BookCategoryCB.Name = "BookCategoryCB";
             this.BookCategoryCB.Size = new System.Drawing.Size(221, 21);
             this.BookCategoryCB.TabIndex = 2;
-            this.BookCategoryCB.SelectedIndexChanged += new System.EventHandler(this.BookCategoryCB_SelectedIndexChanged);
+            
             // 
             // BookQuantityTB
             // 

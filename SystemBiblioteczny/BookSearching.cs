@@ -19,7 +19,7 @@ namespace SystemBiblioteczny
     public partial class BookSearchingForm : Form 
     {
         /// <summary>
-        /// 
+        /// Klasa okna Wyszukania ksiazki
         /// </summary>
          
         public BookSearchingForm() 
@@ -41,7 +41,7 @@ namespace SystemBiblioteczny
         private void BookCategoryTitleSearchButton_Click(object sender, EventArgs e) 
         {
             SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123();
-            var book = context.Books.Where(x => x.Title == BookTitleCB.Text || x.Category == BookCategoryCB.Text).ToList();
+            var book = context.Books.Where(x => x.Title == BookTitleTB.Text || x.Category == BookCategoryCB.Text).ToList();
             DataGrid.DataSource = book;
         }
 
@@ -53,8 +53,8 @@ namespace SystemBiblioteczny
         private void DataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var title = DataGrid.Rows[e.RowIndex].Cells[2].Value;
-            var Quantity = DataGrid.Rows[e.RowIndex].Cells[4].Value;
-            var category = DataGrid.Rows[e.RowIndex].Cells[3].Value;
+            var Quantity = DataGrid.Rows[e.RowIndex].Cells[3].Value;
+            var category = DataGrid.Rows[e.RowIndex].Cells[4].Value;
             var BookId = DataGrid.Rows[e.RowIndex].Cells[1].Value;
             BookTitleGBTB.Text = title.ToString();
             BookQuantityGBTB.Text = Quantity.ToString();

@@ -10,20 +10,34 @@ using System.Windows.Forms;
 
 namespace SystemBiblioteczny
 {
+    /// <summary>
+    /// Klasa dla głownego okna.
+    /// </summary>
     public partial class MainForm : Form
     {
+        /// <summary>
+        /// Metoda dla głownego okna.
+        /// </summary>
         public MainForm()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Metoda Strip menu dodaj ksiazke. Po przycisnieciu odpala okno Menadzera ksiazek
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dodajKsiazkeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BookManageForm book = new BookManageForm();
             book.MdiParent = this;
             book.Show();
         }
-
+        /// <summary>
+        /// Metoda Strip menu dodaj kategorie. Po przycisnieciu odpala okno Dodawania i usuwania kategorii
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dodajKategorieToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CategoryAddForm book = new CategoryAddForm();
@@ -31,10 +45,11 @@ namespace SystemBiblioteczny
             book.Show();
         }
 
-        private void usuńKsiazkeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+        /// <summary>
+        ///  Metoda Strip menu Wypozycz. Po przycisnieciu odpala okno Wyszukania ksiazki 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void wypozyczToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -42,7 +57,11 @@ namespace SystemBiblioteczny
             book.MdiParent = this;
             book.Show();
         }
-
+        /// <summary>
+        ///  Metoda Strip menu Oddaj ksiazke. Po przycisnieciu odpala nam okno Oddawania ksiazki
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void oddajKsiazkeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BookReturnForm book = new BookReturnForm();
@@ -51,7 +70,5 @@ namespace SystemBiblioteczny
         }
 
         
-
-
     }
 }

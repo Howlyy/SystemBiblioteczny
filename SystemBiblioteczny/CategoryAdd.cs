@@ -12,6 +12,9 @@ using System.Windows.Forms;
 
 namespace SystemBiblioteczny
 {
+    /// <summary>
+    ///  Klasa dla okna Dodawania i usuwania kategorii
+    /// </summary>
     public partial class CategoryAddForm : Form
     {
         
@@ -22,7 +25,11 @@ namespace SystemBiblioteczny
             
 
         }
-
+        /// <summary>
+        /// Metoda przycisku Dodaj kategorie. Po przycisnieciu dodaje kategorie do bazy
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CategoryAddButton_Click(object sender, EventArgs e)
         {
             SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123();
@@ -33,10 +40,16 @@ namespace SystemBiblioteczny
             MessageBox.Show("Dodano kategorie!");
         
         }
-        /*private void CategoryDeleteButton_Click(object sender, EventArgs e) 
+        /// <summary>
+        /// Metoda przycisku Usun kategorie. Po przycisnieciu usuwa kategorie z bazy jednoczesnie sprawdza czy taka jest 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CategoryDeleteButton_Click(object sender, EventArgs e) 
         {
             SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123();
             Category category = new Category();
+            
             
 
             if (category == null)
@@ -45,14 +58,21 @@ namespace SystemBiblioteczny
             }
             else
             {
-                
-                category.TitleCategory = CategoryDeleteTB.Text;
-                context.Categories.Remove(category)
+                var categoryToDelete = (from d in context.Categories
+                              where d.TitleCategory == CategoryDeleteTB.Text
+                              select d).Single();
+
+                context.Categories.Remove(categoryToDelete);
                 context.SaveChanges();
+
+                
                 MessageBox.Show("Usunięto kategorie!");
+                
+
             }
         
-        }*/
+        }
+        
 
 
 

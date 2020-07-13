@@ -10,16 +10,23 @@ using System.Windows.Forms;
 
 namespace SystemBiblioteczny
 {
-    public partial class LoginForm : Form /// głowna klasa okna pierwszego ( Form1)
+    /// <summary>
+    /// Klasa dla okna Logowania
+    /// </summary>
+    public partial class LoginForm : Form 
     {
         public LoginForm()
         {
             InitializeComponent();
         }
 
-        
 
-        private void LoginButton_Click(object sender, EventArgs e) /// prywatna funkcja przycisku Login
+        /// <summary>
+        /// Metoda przycisku Login. Po przycisnieciu Sprawdza dane z TextBoxów czy poprawne tak jak w bazie i loguje dalej
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LoginButton_Click(object sender, EventArgs e) 
         {
             SystemBibliotecznyEntities123 content = new SystemBibliotecznyEntities123(); //połaczenie do bazy
             if (UsernameTB.Text != string.Empty && PasswordTB.Text != string.Empty) // sprawdzenie czy user i pass nie są puste
