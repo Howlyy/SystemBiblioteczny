@@ -9,7 +9,6 @@
 
 namespace SystemBiblioteczny
 {
-    using NSubstitute.ReceivedExtensions;
     using System;
     using System.Collections.Generic;
     
@@ -18,7 +17,7 @@ namespace SystemBiblioteczny
         public int Id { get; set; }
         public string BookID { get; set; }
         public string Title { get; set; }
-        public int Quantity { get; set; }
+        public Nullable<int> Quantity { get; set; }
         public string Category { get; set; }
     }
 }
