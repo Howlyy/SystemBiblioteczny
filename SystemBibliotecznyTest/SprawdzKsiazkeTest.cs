@@ -18,7 +18,7 @@ namespace SystemBibliotecznyTest
             bool expected = true;
 
             //Act
-            bool actual = Program.SprawdzKsiazke1("Lel");
+            bool actual = Program.SprawdzKsiazke1("LEL");
 
             //Assert
             Assert.AreEqual(expected, actual);

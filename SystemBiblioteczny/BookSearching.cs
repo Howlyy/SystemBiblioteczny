@@ -82,6 +82,7 @@ namespace SystemBiblioteczny
             else
             {
                 singlebook.Quantity -= 1;
+                MessageBox.Show("Wypozyczono 1 ksiazke!");
             }
             
             

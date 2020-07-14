@@ -17,12 +17,12 @@ namespace SystemBiblioteczny
     /// </summary>
     public partial class CategoryAddForm : Form
     {
-        
+        SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123();
         public CategoryAddForm()
         {
             InitializeComponent();
-            
-            
+            CategoryDeleteCB.DataSource = context.Categories.ToList();
+            CategoryDeleteCB.DisplayMember = "TitleCategory";
 
         }
         /// <summary>
@@ -32,12 +32,14 @@ namespace SystemBiblioteczny
         /// <param name="e"></param>
         private void CategoryAddButton_Click(object sender, EventArgs e)
         {
-            SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123();
+            
             Category category = new Category();
             category.TitleCategory = CategoryAddTB.Text;
             context.Categories.Add(category);
             context.SaveChanges();
             MessageBox.Show("Dodano kategorie!");
+            this.Hide();
+            
         
         }
         /// <summary>
@@ -59,13 +61,16 @@ namespace SystemBiblioteczny
             else
             {
                 var categoryToDelete = (from d in context.Categories
-                              where d.TitleCategory == CategoryDeleteTB.Text
+                              where d.TitleCategory == CategoryDeleteCB.Text
                               select d).Single();
 
                 context.Categories.Remove(categoryToDelete);
                 context.SaveChanges();
 
-                
+                CategoryDeleteCB.DataSource = null;
+                CategoryDeleteCB.Items.Clear();
+                CategoryDeleteCB.DataSource = context.Categories.ToList();
+
                 MessageBox.Show("Usunięto kategorie!");
                 
 
