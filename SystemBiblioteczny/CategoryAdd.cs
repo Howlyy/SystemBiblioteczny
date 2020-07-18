@@ -23,6 +23,7 @@ namespace SystemBiblioteczny
             InitializeComponent();
             CategoryDeleteCB.DataSource = context.Categories.ToList();
             CategoryDeleteCB.DisplayMember = "TitleCategory";
+            
 
         }
         /// <summary>
@@ -38,7 +39,7 @@ namespace SystemBiblioteczny
             context.Categories.Add(category);
             context.SaveChanges();
             MessageBox.Show("Dodano kategorie!");
-            this.Hide();
+            
             
         
         }
@@ -72,7 +73,8 @@ namespace SystemBiblioteczny
                 CategoryDeleteCB.DataSource = context.Categories.ToList();
 
                 MessageBox.Show("Usunięto kategorie!");
-                
+
+               
 
             }
         

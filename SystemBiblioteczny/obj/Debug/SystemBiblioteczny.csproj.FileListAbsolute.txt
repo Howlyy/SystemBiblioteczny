@@ -24,4 +24,4 @@ C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemB
 C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\bin\Debug\NSubstitute.xml
 C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\obj\Debug\SystemBiblioteczny.MainForm.resources
-C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\obj\Debug\SystemBiblioteczny.Form1.resources
+C:\Users\Howly\Desktop\uczelnia\Projekt Programowanie\SystemBiblioteczny\SystemBiblioteczny\obj\Debug\SystemBiblioteczny.IssueInfo.resources

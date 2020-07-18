@@ -69,6 +69,11 @@ namespace SystemBiblioteczny
             book.Show();
         }
 
-        
+        private void daneOWypozyczeniachToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IssueInfo book = new IssueInfo();
+            book.MdiParent = this;
+            book.Show();
+        }
     }
 }

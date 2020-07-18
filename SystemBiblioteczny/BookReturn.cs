@@ -28,8 +28,8 @@ namespace SystemBiblioteczny
         /// <param name="e"></param>
         private void BookReturnButton_Click(object sender, EventArgs e)
         {
-            var Issuebook = context.Issues.Where(x => x.BookID == BookIDEnterTB.Text && x.IssueReturn == true).FirstOrDefault();
-            Issuebook.IssueReturn = false;
+            var Issuebook = context.Issues.Where(x => x.BookID == BookIDEnterTB.Text && x.IssueNotReturn == true).FirstOrDefault();
+            Issuebook.IssueNotReturn = false;
             var book = context.Books.Where(x => x.BookID == BookIDEnterTB.Text).FirstOrDefault();
             book.Quantity += 1;
             context.SaveChanges();

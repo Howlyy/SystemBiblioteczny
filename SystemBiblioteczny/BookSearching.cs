@@ -27,7 +27,9 @@ namespace SystemBiblioteczny
             SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123();
             InitializeComponent();
             BookCategoryCB.DataSource = context.Categories.ToList();
-            BookCategoryCB.DisplayMember = "TitleCategory";
+            BookCategoryCB.DisplayMember = "TitleCategory"; 
+            
+
         }
 
         
@@ -44,6 +46,7 @@ namespace SystemBiblioteczny
             var book = context.Books.Where(x => x.Title == BookTitleTB.Text || x.Category == BookCategoryCB.Text).ToList();
             DataGrid.DataSource = book;
         }
+        // DOPISAĆ KATEGORIE NA NULL
 
         /// <summary>
         ///  Metoda panelu datagrid pokazująca baze z bazy 
@@ -73,7 +76,7 @@ namespace SystemBiblioteczny
             Issue book = new Issue();
             book.IDStudenta = StudentIDGBTB.Text;
             book.BookID = BookIDGBTB.Text;
-            book.IssueReturn = true;
+            book.IssueNotReturn = true;
             var singlebook = context.Books.Where(x => x.BookID == BookIDGBTB.Text).FirstOrDefault();
             if (singlebook.Quantity == 0)
             {

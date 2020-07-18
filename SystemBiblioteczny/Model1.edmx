@@ -20,7 +20,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="BookID" Type="nvarchar" MaxLength="50" />
           <Property Name="Title" Type="nvarchar" MaxLength="50" />
-          <Property Name="Quantity" Type="int" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
           <Property Name="Category" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Category">
@@ -37,7 +37,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="BookID" Type="nvarchar" MaxLength="50" />
           <Property Name="IDStudenta" Type="nvarchar" MaxLength="50" />
-          <Property Name="IssueReturn" Type="bit" />
+          <Property Name="IssueNotReturn" Type="bit" />
         </EntityType>
         <EntityContainer Name="SystemBibliotecznyModelStoreContainer">
           <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
@@ -64,7 +64,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BookID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Quantity" Type="Int32" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
           <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="SystemBibliotecznyEntities123" annotation:LazyLoadingEnabled="true">
@@ -87,7 +87,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BookID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IDStudenta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="IssueReturn" Type="Boolean" />
+          <Property Name="IssueNotReturn" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -126,7 +126,7 @@
           <EntitySetMapping Name="Issues">
             <EntityTypeMapping TypeName="SystemBibliotecznyModel.Issue">
               <MappingFragment StoreEntitySet="Issue">
-                <ScalarProperty Name="IssueReturn" ColumnName="IssueReturn" />
+                <ScalarProperty Name="IssueNotReturn" ColumnName="IssueNotReturn" />
                 <ScalarProperty Name="IDStudenta" ColumnName="IDStudenta" />
                 <ScalarProperty Name="BookID" ColumnName="BookID" />
                 <ScalarProperty Name="Id" ColumnName="Id" />

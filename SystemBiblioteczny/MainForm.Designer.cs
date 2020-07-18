@@ -35,6 +35,7 @@
             this.wypozyczeniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wypozyczToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oddajKsiazkeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.daneOWypozyczeniachToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +77,8 @@
             // 
             this.wypozyczeniaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.wypozyczToolStripMenuItem,
-            this.oddajKsiazkeToolStripMenuItem});
+            this.oddajKsiazkeToolStripMenuItem,
+            this.daneOWypozyczeniachToolStripMenuItem});
             this.wypozyczeniaToolStripMenuItem.Name = "wypozyczeniaToolStripMenuItem";
             this.wypozyczeniaToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.wypozyczeniaToolStripMenuItem.Text = "Wypozyczenia";
@@ -84,16 +86,23 @@
             // wypozyczToolStripMenuItem
             // 
             this.wypozyczToolStripMenuItem.Name = "wypozyczToolStripMenuItem";
-            this.wypozyczToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.wypozyczToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.wypozyczToolStripMenuItem.Text = "Wypozycz";
             this.wypozyczToolStripMenuItem.Click += new System.EventHandler(this.wypozyczToolStripMenuItem_Click);
             // 
             // oddajKsiazkeToolStripMenuItem
             // 
             this.oddajKsiazkeToolStripMenuItem.Name = "oddajKsiazkeToolStripMenuItem";
-            this.oddajKsiazkeToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.oddajKsiazkeToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.oddajKsiazkeToolStripMenuItem.Text = "Oddaj ksiazke";
             this.oddajKsiazkeToolStripMenuItem.Click += new System.EventHandler(this.oddajKsiazkeToolStripMenuItem_Click);
+            // 
+            // daneOWypozyczeniachToolStripMenuItem
+            // 
+            this.daneOWypozyczeniachToolStripMenuItem.Name = "daneOWypozyczeniachToolStripMenuItem";
+            this.daneOWypozyczeniachToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.daneOWypozyczeniachToolStripMenuItem.Text = "Dane o wypozyczeniach";
+            this.daneOWypozyczeniachToolStripMenuItem.Click += new System.EventHandler(this.daneOWypozyczeniachToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -123,5 +132,6 @@
         private System.Windows.Forms.ToolStripMenuItem wypozyczeniaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem wypozyczToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oddajKsiazkeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem daneOWypozyczeniachToolStripMenuItem;
     }
 }

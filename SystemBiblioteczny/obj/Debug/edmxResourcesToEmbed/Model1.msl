@@ -32,7 +32,7 @@
     <EntitySetMapping Name="Issues">
       <EntityTypeMapping TypeName="SystemBibliotecznyModel.Issue">
         <MappingFragment StoreEntitySet="Issue">
-          <ScalarProperty Name="IssueReturn" ColumnName="IssueReturn" />
+          <ScalarProperty Name="IssueNotReturn" ColumnName="IssueNotReturn" />
           <ScalarProperty Name="IDStudenta" ColumnName="IDStudenta" />
           <ScalarProperty Name="BookID" ColumnName="BookID" />
           <ScalarProperty Name="Id" ColumnName="Id" />
