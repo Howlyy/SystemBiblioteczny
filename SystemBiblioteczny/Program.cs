@@ -21,13 +21,14 @@ namespace SystemBiblioteczny
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new LoginForm());
         }
 
         /// <summary>
         ///  Metoda Sprawdzenia dostepnosci ksiazki. Metoda do testów
         /// </summary>
-        /// <param name="title"></param>
+        /// <param name="title"> Tytuł ksiązki którą chcemy sprawdzić</param>
+        /// <returns>Jezeli jest w bazie - True , inaczej False</returns>
         
         
         static public bool SprawdzKsiazke1(string title)
