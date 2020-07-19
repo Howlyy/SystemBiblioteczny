@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace SystemBiblioteczny
 {
     /// <summary>
-    /// Klasa dla okna Logowania
+    /// Klasa okna Logowania
     /// </summary>
     public partial class LoginForm : Form 
     {

@@ -11,7 +11,9 @@ namespace SystemBiblioteczny
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// Klasa tableki Category. Tabela przechowuje dane o kategoriach
+    /// </summary>
     public partial class Category
     {
         public int Id { get; set; }

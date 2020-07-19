@@ -11,13 +11,11 @@ using System.Windows.Forms;
 namespace SystemBiblioteczny
 {
     /// <summary>
-    /// Klasa dla głownego okna.
+    /// Klasa  głownego okna.
     /// </summary>
     public partial class MainForm : Form
     {
-        /// <summary>
-        /// Metoda dla głownego okna.
-        /// </summary>
+        
         public MainForm()
         {
             InitializeComponent();
@@ -78,6 +76,11 @@ namespace SystemBiblioteczny
             IssueInfo book = new IssueInfo();
             book.MdiParent = this;
             book.Show();
+        }
+
+        private void ksiazkiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

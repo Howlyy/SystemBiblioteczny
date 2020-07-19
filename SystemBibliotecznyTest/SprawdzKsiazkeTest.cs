@@ -6,11 +6,16 @@ using System;
 
 namespace SystemBibliotecznyTest
 {
+    /// <summary>
+    /// Klasa testów
+    /// </summary>
     [TestClass]
     public class SprawdzKsiazkeTest
     {
         
-
+        /// <summary>
+        /// Metoda testowa 1
+        /// </summary>
     [TestMethod]
         public void BookCheck()
         {
@@ -23,6 +28,9 @@ namespace SystemBibliotecznyTest
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        /// <summary>
+        /// Metoda testowa 2
+        /// </summary>
         [TestMethod]
         public void BookCheck2()
         {

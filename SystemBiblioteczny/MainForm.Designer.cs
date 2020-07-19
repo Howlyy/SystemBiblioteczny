@@ -58,6 +58,7 @@
             this.ksiazkiToolStripMenuItem.Name = "ksiazkiToolStripMenuItem";
             this.ksiazkiToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.ksiazkiToolStripMenuItem.Text = "Ksiazki";
+            this.ksiazkiToolStripMenuItem.Click += new System.EventHandler(this.ksiazkiToolStripMenuItem_Click);
             // 
             // dodajKsiazkeToolStripMenuItem
             // 

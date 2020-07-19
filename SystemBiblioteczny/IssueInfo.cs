@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace SystemBiblioteczny
 {   
     /// <summary>
-    /// Klasa dla okna dane o wypozyczeniach.
+    /// Klasa okna dane o wypozyczeniach.
     /// </summary>
     public partial class IssueInfo : Form
     {

@@ -13,14 +13,12 @@ using System.Windows.Forms;
 namespace SystemBiblioteczny
 {
     /// <summary>
-    /// BookSearchingForm to panel służący do wyszukania i wypozyczenia ksiazki
+    /// Klasa okna wyszukiwania ksiazki
     /// </summary>
 
     public partial class BookSearchingForm : Form 
     {
-        /// <summary>
-        /// Klasa okna Wyszukania ksiazki
-        /// </summary>
+        
          
         public BookSearchingForm() 
         {

@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace SystemBiblioteczny
 {
     /// <summary>
-    /// Klasa dla okna zwrotu ksiazki.
+    /// Klasa  okna zwrotu ksiazki.
     /// </summary>
     public partial class BookReturnForm : Form
     {

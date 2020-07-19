@@ -8,10 +8,13 @@ using System.Windows.Forms;
 
 namespace SystemBiblioteczny
 {
+    /// <summary>
+    /// Klasa Program
+    /// </summary>
     static public class Program
     {
         /// <summary>
-        /// Główny punkt wejścia dla aplikacji.
+        /// Main. Start programu
         /// </summary>
         [STAThread]
         static void Main()
@@ -26,29 +29,6 @@ namespace SystemBiblioteczny
         /// </summary>
         /// <param name="title"></param>
         
-        static public bool SprawdzKsiazke(string title)
-        {
-            SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123();
-            Book book = new Book();
-
-            
-
-            if (book == null)
-            {
-                
-                return false;
-            }
-            else
-            {
-                var Szukaj = (from d in context.Books
-                                        where d.Title == title
-                                        select d).Single();
-
-                
-                return true;
-            }
-
-        }
         
         static public bool SprawdzKsiazke1(string title)
         {

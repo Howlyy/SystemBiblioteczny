@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace SystemBiblioteczny
 {
     /// <summary>
-    ///  Klasa dla okna Dodawania i usuwania kategorii
+    ///  Klasa  okna Dodawania i usuwania kategorii
     /// </summary>
     public partial class CategoryAddForm : Form
     {

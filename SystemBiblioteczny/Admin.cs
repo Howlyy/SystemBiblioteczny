@@ -11,7 +11,9 @@ namespace SystemBiblioteczny
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// Klasa dla bazy Admin. Przechowuje dane logowania
+    /// </summary>
     public partial class Admin
     {
         public int Id { get; set; }

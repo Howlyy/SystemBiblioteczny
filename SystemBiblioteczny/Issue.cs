@@ -11,7 +11,9 @@ namespace SystemBiblioteczny
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// Klasa tabeli Issue. Tabela przechowuje dane o wypozyczeniach
+    /// </summary>
     public partial class Issue
     {
         public int Id { get; set; }

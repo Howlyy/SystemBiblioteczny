@@ -11,7 +11,9 @@ namespace SystemBiblioteczny
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// Klasa tabeli Book. Tabela przechowuje dane o ksiazkach
+    /// </summary>
     public partial class Book
     {
         public int Id { get; set; }

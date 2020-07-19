@@ -11,14 +11,14 @@ using System.Windows.Forms;
 namespace SystemBiblioteczny
 {
     /// <summary>
-    /// Klasa dla okna Menadzer ksiazek. 
+    /// Klasa  okna Menadzer ksiazek. 
     /// </summary>
     public partial class BookManageForm : Form
     {
         SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123(); // przez context mamy dostep do dany z bazy
 
         /// <summary>
-        /// Metoda dla okna Menadzera ksiazek
+        /// Metoda  okna Menadzera ksiazek
         /// </summary>
         public BookManageForm()
         {
