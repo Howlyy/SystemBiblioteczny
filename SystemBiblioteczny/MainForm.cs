@@ -68,7 +68,11 @@ namespace SystemBiblioteczny
             book.MdiParent = this;
             book.Show();
         }
-
+        /// <summary>
+        /// Metoda Strip menu Dane o wypozyczeniach. Po przycisnieciu odpala nam okno w ktorym jest data grid informacji z bazy Issue
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void daneOWypozyczeniachToolStripMenuItem_Click(object sender, EventArgs e)
         {
             IssueInfo book = new IssueInfo();

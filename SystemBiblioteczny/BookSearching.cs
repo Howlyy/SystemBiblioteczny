@@ -46,7 +46,7 @@ namespace SystemBiblioteczny
             var book = context.Books.Where(x => x.Title == BookTitleTB.Text || x.Category == BookCategoryCB.Text).ToList();
             DataGrid.DataSource = book;
         }
-        // DOPISAĆ KATEGORIE NA NULL
+        
 
         /// <summary>
         ///  Metoda panelu datagrid pokazująca baze z bazy 

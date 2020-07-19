@@ -18,6 +18,7 @@ namespace SystemBiblioteczny
     public partial class CategoryAddForm : Form
     {
         SystemBibliotecznyEntities123 context = new SystemBibliotecznyEntities123();
+       
         public CategoryAddForm()
         {
             InitializeComponent();
