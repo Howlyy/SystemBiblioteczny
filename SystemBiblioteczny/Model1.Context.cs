@@ -12,7 +12,9 @@ namespace SystemBiblioteczny
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+    /// <summary>
+    /// Klasa uzyskania dostepu do danych. Framework Entity
+    /// </summary>
     public partial class SystemBibliotecznyEntities123 : DbContext
     {
         public SystemBibliotecznyEntities123()

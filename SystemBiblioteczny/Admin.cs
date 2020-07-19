@@ -12,7 +12,7 @@ namespace SystemBiblioteczny
     using System;
     using System.Collections.Generic;
     /// <summary>
-    /// Klasa dla bazy Admin. Przechowuje dane logowania
+    /// Klasa dla bazy Admin. Tabela przechowuje dane logowania
     /// </summary>
     public partial class Admin
     {
